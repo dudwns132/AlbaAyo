@@ -3,9 +3,11 @@
         <b-button v-b-toggle.sidebar-1 id="logo">
             <img alt="main logo" src="../img/logo.png" width="160">
         </b-button>
+
         <div class='title'>
             <h4>{{ title }}</h4>
         </div>
+
         <b-button id="login">
                 <a href="https://naver.com"><img alt="login button" src="../img/loginbtn.png" width="100"></a>
         </b-button>
@@ -24,7 +26,7 @@
                 tile
             >
                 <v-list shaped>
-                <v-list-item link="">
+                <v-list-item href="http://localhost:8080/">
                     <v-list-item-icon>
                     <v-icon >mdi-home</v-icon>
                     </v-list-item-icon>
@@ -257,5 +259,4 @@ export default {
         background-color: #8dc1e9;
         border-color: #8dc1e9;
     }
-
 </style>

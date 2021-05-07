@@ -1,48 +1,168 @@
 <template>
-  <!-- <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar> -->
-
-    <!-- <v-main> -->
       <div>
-        <Header />
-        <MainContent />
-        <Footer />
+        <!-- 페이지 헤더~152 -->
+        <pageheader>
+        <b-button v-b-toggle.sidebar-1 id="logo">
+            <img alt="main logo" src="./img/logo.png" width="160">
+        </b-button>
+
+        <div class='title'>
+            <h4>{{ title }}</h4>
+        </div>
+        
+        <b-button id="login">
+                <a href="http://localhost:8084/LoginPage"><img alt="login button" src="./img/loginbtn.png" width="100"></a>
+        </b-button>
+        <b-sidebar 
+            id="sidebar-1"
+            title="Menu"
+            :backdrop-variant="variant"
+            backdrop
+            bg-variant="info"  
+            text-variant="light">
+            <!-- 사이드바 하단부 메뉴 리스트  -->
+            <v-card
+                class="mx-auto"
+                width="300"
+                height="600"
+                tile
+            >
+                <v-list shaped>
+                <v-list-item href="http://localhost:8084/">
+                    <v-list-item-icon>
+                    <v-icon >mdi-home</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-title>Home</v-list-item-title>
+                </v-list-item>
+
+                <v-list-group
+                    :value="false"
+                    prepend-icon="mdi-account-circle"
+                >
+                    <template v-slot:activator>
+                    <v-list-item-title>Group Management</v-list-item-title>
+                    </template>
+
+                    <v-list-item id="menu1" href="http://localhost:8084/invite">
+                        <v-list-item-icon>
+                            <v-icon>mdi-account-plus-outline</v-icon>
+                        </v-list-item-icon>
+
+                        <v-list-item-title>Group Invite</v-list-item-title>
+                    </v-list-item>
+
+                    <v-list-item id="menu2" href="http://localhost:8084/test">
+                        <v-list-item-icon>
+                            <v-icon>mdi-format-list-text</v-icon>
+                        </v-list-item-icon>
+
+                        <v-list-item-title>Group List</v-list-item-title>
+                    </v-list-item>
+                    <!-- <v-list-group
+                    :value="true"
+                    no-action
+                    sub-group
+                    >
+                    <template v-slot:activator>
+                        <v-list-item-content>
+                        <v-list-item-title>Group Invite</v-list-item-title>
+                        </v-list-item-content>
+                    </template>
+
+                    <v-list-item
+                        v-for="([title, icon], i) in admins"
+                        :key="i"
+                        link
+                    >
+                        <v-list-item-title v-text="title"></v-list-item-title>
+
+                        <v-list-item-icon>
+                        <v-icon v-text="icon"></v-icon>
+                        </v-list-item-icon>
+                    </v-list-item>
+                    </v-list-group> -->
+
+                    <!-- <v-list-group
+                    no-action
+                    sub-group
+                    >
+                    <template v-slot:activator>
+                        <v-list-item-content>
+                        <v-list-item-title>Group Invite</v-list-item-title>
+                        </v-list-item-content>
+                    </template>
+
+                    <v-list-item
+                        v-for="([title, icon], i) in cruds"
+                        :key="i"
+                        link
+                    >
+                        <v-list-item-title v-text="title"></v-list-item-title>
+
+                        <v-list-item-icon>
+                        <v-icon v-text="icon"></v-icon>
+                        </v-list-item-icon>
+                    </v-list-item>
+                    </v-list-group> -->
+                </v-list-group>
+
+                <v-list-item link="">
+                    <v-list-item-icon>
+                    <v-icon>mdi-message-text</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-title>Group Chat</v-list-item-title>
+                </v-list-item>
+
+                <v-list-item href="http://localhost:8084/schedule">
+                    <v-list-item-icon>
+                    <v-icon>mdi-calendar</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-title>Schedule</v-list-item-title>
+                </v-list-item>
+
+                <v-list-item link="">
+                    <v-list-item-icon>
+                    <v-icon>mdi-account-multiple</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-title>Employee List</v-list-item-title>
+                </v-list-item>
+
+                <v-list-item link="">
+                    <v-list-item-icon>
+                    <v-icon>mdi-cash-check</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-title>Salary</v-list-item-title>
+                </v-list-item>
+
+                <v-list-item link="">
+                    <v-list-item-icon>
+                    <v-icon>mdi-bulletin-board</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-title>Notice</v-list-item-title>
+                </v-list-item>
+                </v-list>
+            </v-card>
+        </b-sidebar>
+    </pageheader>
+
+    <!-- maincontent -->
+      <router-view />
         <!-- <router-view/> -->
+    <!-- 페이지 하단 부분 ~   -->
+    <v-footer color="green" dark fixed padless>
+        <v-col
+        class="text-center"
+        cols="12"
+        >
+        {{ new Date().getFullYear() }} — <strong>School of Computer Information 3CPB</strong>
+        </v-col>
+    </v-footer>
       </div>
     <!-- </v-main>
   </v-app> -->
@@ -50,19 +170,83 @@
 
 <script>
 
-import Header from './components/Header.vue'
-import MainContent from './components/MainContent.vue'
-import Footer from './components/Footer.vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+// import MainContent from './components/MainContent.vue'
+// import Schedule from './views/Schedule.vue'
 
 export default {
   name: 'App',
   components: {
-    Header,
-    MainContent,
-    Footer
+    // MainContent,
+    // Schedule
   },
-  data: () => ({
-    //
-  }),
+  data() {
+        return {
+            title: '알바에요',
+            variant: 'dark',
+            variants: [
+                'transparent',
+                'white',
+                'light',
+                'dark',
+                'primary',
+                'secondary',
+                'success',
+                'danger',
+                'warning',
+                'info',
+
+            ]
+        }
+    },
 };
 </script>
+<style>
+    #menu1 {
+        margin-left: 20px;
+    }
+    #menu2 {
+        margin-left: 20px;
+    }
+    /* a {
+        text-decoration:none; color : white;
+        font-size: 25px;
+    } */
+    /* #sidebar-1 {
+        background-color: #747fA5;
+    } */
+    /* 로그 사이드바 버튼 */
+    pageheader {
+        margin-left: -8px;
+        margin-top: -8px;
+        margin-right: 0px;
+        height:200px;
+        background-color: #8dc1e9;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+    }
+    /* 왼쪽 상단 로그 */
+    #logo {
+        margin-left: 40px;
+        background-color: #8dc1e9;
+        border-color: #8dc1e9;
+    }
+    /* 헤더안에 있는 중앙글자 */
+    pageheader h4{
+        width: 100%;
+        height: 100%;
+        font-size: 40px;
+        color: white;
+        font-family: 'Yu Gothic';
+        display: flex;
+    }
+    /* 로그인 버튼 */
+    #login {
+        display: flex;
+        margin-right: 40px;
+        background-color: #8dc1e9;
+        border-color: #8dc1e9;
+    }
+</style>

@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div class="LoginPage" id="app" >
     <img src= "../img/logo.png" alt="logo" width="300" height="300"><br>
 
         <a href="/oauth2/authorization/google">
@@ -11,11 +11,13 @@
         </a>
   </div>
 </template>
+
 <script>
 export default {
     name: 'App'
 }
 </script>
+
 <style>
     #app {
         font-family: Avenir, Helvetica, Arial, sans-serif;
