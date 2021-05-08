@@ -11,15 +11,15 @@
         </div>
         
         <b-button id="login">
-                <a href="http://localhost:8084/LoginPage"><img alt="login button" src="./img/loginbtn.png" width="100"></a>
+                <a href="http://localhost:8080/LoginPage"><img alt="login button" src="./img/loginbtn.png" width="100"></a>
         </b-button>
         <b-sidebar 
             id="sidebar-1"
             title="Menu"
             :backdrop-variant="variant"
             backdrop
-            bg-variant="info"  
-            text-variant="light">
+            bg-variant="light"  
+            text-variant="dark">
             <!-- 사이드바 하단부 메뉴 리스트  -->
             <v-card
                 class="mx-auto"
@@ -28,7 +28,7 @@
                 tile
             >
                 <v-list shaped>
-                <v-list-item href="http://localhost:8084/">
+                <v-list-item href="http://localhost:8080/">
                     <v-list-item-icon>
                     <v-icon >mdi-home</v-icon>
                     </v-list-item-icon>
@@ -44,7 +44,7 @@
                     <v-list-item-title>Group Management</v-list-item-title>
                     </template>
 
-                    <v-list-item id="menu1" href="http://localhost:8084/invite">
+                    <v-list-item id="menu1" href="http://localhost:8080/invite">
                         <v-list-item-icon>
                             <v-icon>mdi-account-plus-outline</v-icon>
                         </v-list-item-icon>
@@ -52,7 +52,7 @@
                         <v-list-item-title>Group Invite</v-list-item-title>
                     </v-list-item>
 
-                    <v-list-item id="menu2" href="http://localhost:8084/test">
+                    <v-list-item id="menu2" href="http://localhost:8080/test">
                         <v-list-item-icon>
                             <v-icon>mdi-format-list-text</v-icon>
                         </v-list-item-icon>
@@ -115,7 +115,7 @@
                     <v-list-item-title>Group Chat</v-list-item-title>
                 </v-list-item>
 
-                <v-list-item href="http://localhost:8084/schedule">
+                <v-list-item href="http://localhost:8080/schedule">
                     <v-list-item-icon>
                     <v-icon>mdi-calendar</v-icon>
                     </v-list-item-icon>

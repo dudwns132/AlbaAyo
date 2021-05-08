@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import MainContent from './components/MainContent.vue'
 import LoginPage from './components/LoginPage.vue'
+import SignUpPage from './components/SignUpPage.vue'
 
 Vue.use(Router)
 
@@ -32,6 +33,11 @@ export default new Router({
             path: '/LoginPage',
             name: 'LoginPage',
             component: LoginPage
+        },
+        {
+            path: '/SignUpPage',
+            name: 'SignUpPage',
+            component: SignUpPage
         }
     ]
 })
