@@ -1,6 +1,6 @@
 <template>
   <div class="MainContent">
-    <b-carousel
+     <b-carousel
       id="carousel-1"
       v-model="slide"
       :interval="4000"
@@ -14,6 +14,18 @@
       @sliding-end="onSlideEnd"
     >
       <!-- Text slides with image -->
+      <b-carousel-slide>
+        <template #img>
+          <img
+            caption="First slide"
+            text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+            width="800"
+            height="600"
+            src="../img/mainpage.png"
+          >
+        </template>
+      </b-carousel-slide>
+
       <b-carousel-slide
         caption="First slide"
         text="Nulla vitae elit libero, a pharetra augue mollis interdum."

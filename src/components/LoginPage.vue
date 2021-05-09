@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Sign In</h1>
+        <h1 id="h1">Sign In</h1>
         <b-form @submit="onSubmit" @reset="onReset" v-if="show">
             <b-form-group 
                 id="input-group-3" 
@@ -170,7 +170,6 @@ export default {
 </script>
 
 <style>
-    
     #singupbtn {
         margin-left: 700px;
         margin-top: 20px;
@@ -178,7 +177,7 @@ export default {
     #submitbtn {
         margin-top: 20px;
     }
-    h1 {
+    #h1 {
         margin-left: 700px;
         margin-top: 20px;
     }

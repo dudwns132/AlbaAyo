@@ -4,6 +4,7 @@ import router from './router'
 import VueRouter from 'vue-router'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import vuetify from "./plugins/vuetify"
+import VueCarousel from 'vue-carousel';
 
 Vue.config.productionTip = false
 
@@ -14,5 +15,6 @@ Vue.use(VueRouter)
 new Vue({
   router,
   vuetify,
+  VueCarousel,
   render: h => h(App),
 }).$mount('#app')

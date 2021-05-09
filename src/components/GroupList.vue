@@ -1,0 +1,93 @@
+<template>
+  <div id="app" class="GroupList">
+    <h1>Don't you have any Group? or create new Group?</h1>
+    <b-button variant="outline-primary" id="createbtn" href="http://localhost:8080/GroupCreate">Create Group</b-button>
+    <p></p>
+     <b-container id="cont">
+    <b-row>
+      <b-col cols="9">
+        <carousel :perPage="3">
+          <slide class="p-2">
+            <b-card title="Group Name 1" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top tag="article">
+              <b-card-text>
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </b-card-text>
+              <b-button href="#" variant="primary">Group Information</b-button>
+            </b-card>
+          </slide>
+          <slide class="p-2">
+            <b-card title="Group Name 2" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top tag="article">
+              <b-card-text>
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </b-card-text>
+
+              <b-button href="#" variant="primary">Group Information</b-button>
+            </b-card>
+          </slide>
+          <slide class="p-2">
+            <b-card title="Group Name 3" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top tag="article">
+              <b-card-text>
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </b-card-text>
+
+              <b-button href="#" variant="primary">Group Information</b-button>
+            </b-card>
+          </slide>
+          <slide class="p-2">
+            <b-card title="Group Name 4" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top tag="article">
+              <b-card-text>
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </b-card-text>
+
+              <b-button href="#" variant="primary">Go somewhere</b-button>
+            </b-card>
+          </slide>
+        </carousel>
+      </b-col>
+    </b-row>
+  </b-container>
+  </div>
+</template>
+
+<script>
+
+import { Carousel, Slide } from 'vue-carousel';
+
+  export default {
+    el: "#app",
+    components: {
+        Carousel,
+        Slide
+    },
+    data() {
+      return {
+        slide: 0,
+        sliding: null
+      }
+    },
+    // methods: {
+    //   onSlideStart(slide) {
+    //     this.sliding = true
+    //   },
+    //   onSlideEnd(slide) {
+    //     this.sliding = false
+    //   }
+    // }
+  }
+</script>
+<style>
+    #cont {
+      margin-left: 280px;
+    }
+    .row{
+    margin-top:100px;
+    }
+    h1 {
+        margin-left: 540px;
+        margin-top: 20px;
+    }
+    #createbtn {
+        margin-left: 900px;
+        margin-top: 20px;
+    }
+</style>

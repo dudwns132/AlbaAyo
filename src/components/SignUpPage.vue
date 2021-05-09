@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1>Sign Up</h1>
+    <div class="SignUpPage">
+        <h1 id="h1">Sign Up</h1>
         <b-form @submit="onSubmit" @reset="onReset" v-if="show">
         <b-form-group
             id="input-group-1"
@@ -331,7 +331,7 @@ export default {
         margin-left: 350px;
         margin-top: 20px;
     }
-    h1 {
+    #h1 {
         margin-left: 700px;
         margin-top: 20px;
     }

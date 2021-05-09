@@ -3,7 +3,8 @@ import Router from 'vue-router'
 import MainContent from './components/MainContent.vue'
 import LoginPage from './components/LoginPage.vue'
 import SignUpPage from './components/SignUpPage.vue'
-
+import GroupList from './components/GroupList.vue'
+import GroupCreate from './components/GroupCreate.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -38,6 +39,16 @@ export default new Router({
             path: '/SignUpPage',
             name: 'SignUpPage',
             component: SignUpPage
+        },
+        {
+            path: '/GroupList',
+            name: 'GroupList',
+            component: GroupList
+        },
+        {
+            path: '/GroupCreate',
+            name: 'GroupCreate',
+            component: GroupCreate
         }
     ]
 })

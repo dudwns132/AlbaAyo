@@ -52,7 +52,7 @@
                         <v-list-item-title>Group Invite</v-list-item-title>
                     </v-list-item>
 
-                    <v-list-item id="menu2" href="http://localhost:8080/test">
+                    <v-list-item id="menu2" href="http://localhost:8080/GroupList">
                         <v-list-item-icon>
                             <v-icon>mdi-format-list-text</v-icon>
                         </v-list-item-icon>
