@@ -42,7 +42,7 @@
 import axios from 'axios'
 
 export default {
-    data() {
+    data() { 
       return {
         form: {
           userId: '',
