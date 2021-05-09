@@ -39,7 +39,7 @@
         >
             <b-form-input
             id="input-3"
-            v-model="form.id"
+            v-model="form.userId"
             placeholder="Enter ID"
             required
             >
@@ -76,19 +76,6 @@
             </b-form-input>
         </b-form-group>
 
-        <!-- <b-form-group 
-            id="input-group-6" 
-            label="Your Birth:" 
-            label-for="input-6"
-        >
-            <b-form-input
-            id="input-6"
-            v-model="form.birth"
-            placeholder="YYYY/MM/DD"
-            required
-            >
-            </b-form-input>
-        </b-form-group> -->
         <b-form-group 
             id="input-group-6" 
             label="Your Birth" 
@@ -101,118 +88,15 @@
         </b-form-datepicker>
         </b-form-group>
 
-        <b-button variant="outline-primary" id="backbtn" href="http://localhost:8080/LoginPage">← Back</b-button>
-        <b-button variant="outline-primary" id="submitbtn">Submit</b-button>
+        <b-button variant="outline-primary" id="backbtn" href="/LoginPage">← Back</b-button>
+        <b-button variant="outline-primary" id="submitbtn" v-on:click="signUp" href="/LoginPage">Submit</b-button>
     </b-form>
-        <!-- <b-button type="submit" variant="primary">Submit</b-button>
-        <b-button type="reset" variant="danger">Reset</b-button>
-        
-        <b-card class="mt-3" header="Form Data Result">
-        <pre class="m-0">{{ form }}</pre>
-        </b-card> -->
+
     </div>
-    <!-- <validation-observer
-        ref="observer"
-        v-slot="{ invalid }"
-    >
-        <form @submit.prevent="submit">
-        <validation-provider
-            v-slot="{ errors }"
-            name="Name"
-            rules="required|max:10"
-        >
-            <v-text-field
-            v-model="name"
-            :counter="10"
-            :error-messages="errors"
-            label="Name"
-            required
-            ></v-text-field>
-        </validation-provider>
-        <validation-provider
-            v-slot="{ errors }"
-            name="phoneNumber"
-            :rules="{
-            required: true,
-            digits: 7,
-            regex: '^(71|72|74|76|81|82|84|85|86|87|88|89)\\d{5}$'
-            }"
-        >
-            <v-text-field
-            v-model="phoneNumber"
-            :counter="7"
-            :error-messages="errors"
-            label="Phone Number"
-            required
-            ></v-text-field>
-        </validation-provider>
-        <validation-provider
-            v-slot="{ errors }"
-            name="email"
-            rules="required|email"
-        >
-            <v-text-field
-            v-model="email"
-            :error-messages="errors"
-            label="E-mail"
-            required
-            ></v-text-field>
-        </validation-provider>
-        <validation-provider
-            v-slot="{ errors }"
-            name="select"
-            rules="required"
-        >
-            <v-select
-            v-model="select"
-            :items="items"
-            :error-messages="errors"
-            label="Select"
-            data-vv-name="select"
-            required
-            ></v-select>
-        </validation-provider>
-        <validation-provider
-            v-slot="{ errors }"
-            rules="required"
-            name="checkbox"
-        >
-            <v-checkbox
-            v-model="checkbox"
-            :error-messages="errors"
-            value="1"
-            label="Option"
-            type="checkbox"
-            required
-            ></v-checkbox>
-        </validation-provider>
-
-        <v-btn
-            class="mr-4"
-            type="submit"
-            :disabled="invalid"
-        >
-            submit
-        </v-btn>
-        <v-btn @click="clear">
-            clear
-        </v-btn>
-        </form>
-    </validation-observer> -->
-    <!-- <div class="LoginPage" id="app" >
-    <img src= "../img/logo.png" alt="logo" width="300" height="300"><br>
-
-        <a href="/oauth2/authorization/google">
-            <img src= "../img/googlelogin.png" alt="google"><br>
-        </a>
-
-        <a href="/oauth2/authorization/naver">
-        <img src= "../img/naverlogin.png" alt="naver">
-        </a>
-  </div> -->
 </template>
 
 <script>
+import axios from 'axios';
 
 export default {
     data() {
@@ -220,7 +104,7 @@ export default {
         form: {
           email: '',
           name: '',
-          id: '',
+          userId: '',
           password: '',
           passwordcheck: '',
           birth: ''
@@ -233,6 +117,18 @@ export default {
         event.preventDefault()
         alert(JSON.stringify(this.form))
       },
+      signUp: function() {
+              axios.post("http://ec2-18-116-210-28.us-east-2.compute.amazonaws.com:9000/employer/signup", {
+                  userId: this.form.userId,
+                  password: this.form.password,
+                  email: this.form.email,
+                  birth: this.form.birth,
+                  name: this.form.name,
+              })
+              .then(function(response) {
+                  console.log(response.data);
+              });
+          },
       onReset(event) {
         event.preventDefault()
         // Reset our form values
@@ -250,79 +146,11 @@ export default {
       }
     }
   }
-// import { required, digits, email, max, regex } from 'vee-validate/dist/rules'
-// import { extend, ValidationObserver, ValidationProvider, setInteractionMode } from 'vee-validate'
 
-// setInteractionMode('eager')
-
-//   extend('digits', {
-//     ...digits,
-//     message: '{_field_} needs to be {length} digits. ({_value_})',
-//   })
-
-//   extend('required', {
-//     ...required,
-//     message: '{_field_} can not be empty',
-//   })
-
-//   extend('max', {
-//     ...max,
-//     message: '{_field_} may not be greater than {length} characters',
-//   })
-
-//   extend('regex', {
-//     ...regex,
-//     message: '{_field_} {_value_} does not match {regex}',
-//   })
-
-//   extend('email', {
-//     ...email,
-//     message: 'Email must be valid',
-//   })
-
-// export default {
-//     components: {
-//       ValidationProvider,
-//       ValidationObserver,
-//     },
-//     data: () => ({
-//       name: '',
-//       phoneNumber: '',
-//       email: '',
-//       select: null,
-//       items: [
-//         'Item 1',
-//         'Item 2',
-//         'Item 3',
-//         'Item 4',
-//       ],
-//       checkbox: null,
-//     }),
-
-//     methods: {
-//       submit () {
-//         this.$refs.observer.validate()
-//       },
-//       clear () {
-//         this.name = ''
-//         this.phoneNumber = ''
-//         this.email = ''
-//         this.select = null
-//         this.checkbox = null
-//         this.$refs.observer.reset()
-//       },
-//     },
-//   }
 </script>
 
 <style>
-    /* #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-    } */
+
     #backbtn {
         margin-left: 700px;
         margin-top: 20px;
