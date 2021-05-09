@@ -41,7 +41,7 @@
                     prepend-icon="mdi-account-circle"
                 >
                     <template v-slot:activator>
-                    <v-list-item-title>Group Management</v-list-item-title>
+                    <v-list-item-title>그룹관리</v-list-item-title>
                     </template>
 
                     <v-list-item id="menu1" href="http://localhost:8080/invite">
@@ -49,7 +49,7 @@
                             <v-icon>mdi-account-plus-outline</v-icon>
                         </v-list-item-icon>
 
-                        <v-list-item-title>Group Invite</v-list-item-title>
+                        <v-list-item-title>그룹초대</v-list-item-title>
                     </v-list-item>
 
                     <v-list-item id="menu2" href="http://localhost:8080/GroupList">
@@ -57,7 +57,7 @@
                             <v-icon>mdi-format-list-text</v-icon>
                         </v-list-item-icon>
 
-                        <v-list-item-title>Group List</v-list-item-title>
+                        <v-list-item-title>그룹목록</v-list-item-title>
                     </v-list-item>
                     <!-- <v-list-group
                     :value="true"
@@ -112,7 +112,7 @@
                     <v-icon>mdi-message-text</v-icon>
                     </v-list-item-icon>
 
-                    <v-list-item-title>Group Chat</v-list-item-title>
+                    <v-list-item-title>그룹채팅</v-list-item-title>
                 </v-list-item>
 
                 <v-list-item href="http://localhost:8080/schedule">
@@ -120,7 +120,7 @@
                     <v-icon>mdi-calendar</v-icon>
                     </v-list-item-icon>
 
-                    <v-list-item-title>Schedule</v-list-item-title>
+                    <v-list-item-title>일정</v-list-item-title>
                 </v-list-item>
 
                 <v-list-item link="">
@@ -128,7 +128,7 @@
                     <v-icon>mdi-account-multiple</v-icon>
                     </v-list-item-icon>
 
-                    <v-list-item-title>Employee List</v-list-item-title>
+                    <v-list-item-title>직원목록</v-list-item-title>
                 </v-list-item>
 
                 <v-list-item link="">
@@ -136,7 +136,7 @@
                     <v-icon>mdi-cash-check</v-icon>
                     </v-list-item-icon>
 
-                    <v-list-item-title>Salary</v-list-item-title>
+                    <v-list-item-title>월급조회</v-list-item-title>
                 </v-list-item>
 
                 <v-list-item link="">
@@ -144,7 +144,7 @@
                     <v-icon>mdi-bulletin-board</v-icon>
                     </v-list-item-icon>
 
-                    <v-list-item-title>Notice</v-list-item-title>
+                    <v-list-item-title>공지사항</v-list-item-title>
                 </v-list-item>
                 </v-list>
             </v-card>
@@ -174,12 +174,14 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 // import MainContent from './components/MainContent.vue'
 // import Schedule from './views/Schedule.vue'
+// import LoginPage from  './components/LoginPage.vue'
 
 export default {
   name: 'App',
   components: {
     // MainContent,
     // Schedule
+    // LoginPage
   },
   data() {
         return {

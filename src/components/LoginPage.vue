@@ -1,10 +1,10 @@
 <template>
     <div>
-        <h1 id="h1">Sign In</h1>
+        <h1 id="h1">로그인</h1>
         <b-form @submit="onSubmit" @reset="onReset" v-if="show">
             <b-form-group 
                 id="input-group-3" 
-                label="Your ID:" 
+                label="아이디:" 
                 label-for="input-3"
             >
                 <b-form-input
@@ -18,7 +18,7 @@
 
             <b-form-group 
                 id="input-group-4" 
-                label="Your Password:" 
+                label="비밀번호:" 
                 label-for="input-4"
             >
                 <b-form-input
@@ -31,8 +31,8 @@
                 </b-form-input>
             </b-form-group>
 
-            <b-button variant="outline-primary" id="singupbtn" href="/SignUpPage">Sign-Up</b-button>
-            <b-button variant="outline-primary" id="submitbtn" v-on:click="login" >Submit</b-button>
+            <b-button variant="outline-primary" id="singupbtn" href="/SignUpPage">회원가입</b-button>
+            <b-button variant="outline-primary" id="submitbtn" v-on:click="login" >확인</b-button>
         </b-form>
     </div>
    

@@ -1,7 +1,8 @@
 <template>
   <div id="app" class="GroupList">
-    <h1>Don't you have any Group? or create new Group?</h1>
-    <b-button variant="outline-primary" id="createbtn" href="http://localhost:8080/GroupCreate">Create Group</b-button>
+    <h1>그룹이 없으신가요? 또는 그룹을 생성하시겠습니까?</h1>
+    <!-- <h1>Don't you have any Group? or create new Group?</h1> -->
+    <b-button variant="outline-primary" id="createbtn" href="http://localhost:8080/GroupCreate">그룹생성</b-button>
     <p></p>
      <b-container id="cont">
     <b-row>

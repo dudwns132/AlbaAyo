@@ -1,10 +1,10 @@
 <template>
     <div>
-        <h2>Create Group</h2>
+        <h2>그룹 생성</h2>
         <b-form @submit="onSubmit" @reset="onReset" v-if="show">
             <b-form-group 
                 id="input-group-3" 
-                label="Company Registration Number(사업자 등록 번호):" 
+                label="사업자 등록 번호:" 
                 label-for="input-3"
             >
                 <b-form-input
@@ -18,7 +18,7 @@
 
             <b-form-group 
                 id="input-group-4" 
-                label="Group Name(그룹명):" 
+                label="그룹명:" 
                 label-for="input-4"
             >
                 <b-form-input
@@ -26,14 +26,13 @@
                 v-model="form.gName"
                 placeholder="Enter Group Name"
                 required
-                type="password"
                 >
                 </b-form-input>
             </b-form-group>
 
             <b-form-group 
                 id="input-group-5" 
-                label="Address:" 
+                label="주소:" 
                 label-for="input-5"
             >
                 <b-form-input
@@ -41,7 +40,6 @@
                 v-model="form.address"
                 placeholder="Enter Address"
                 required
-                type="password"
                 >
                 </b-form-input>
             </b-form-group>

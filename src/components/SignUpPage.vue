@@ -1,10 +1,10 @@
 <template>
     <div class="SignUpPage">
-        <h1 id="h1">Sign Up</h1>
+        <h1 id="h1">회원가입</h1>
         <b-form @submit="onSubmit" @reset="onReset" v-if="show">
         <b-form-group
             id="input-group-1"
-            label="Email address:"
+            label="이메일 주소:"
             label-for="input-1"
             description="We'll never share your email with anyone else."
         >
@@ -20,7 +20,7 @@
 
         <b-form-group 
             id="input-group-2" 
-            label="Your Name:" 
+            label="이름:" 
             label-for="input-2"
         >
             <b-form-input
@@ -33,12 +33,12 @@
         </b-form-group>
 
         <b-form-group 
-            id="input-group-3" 
-            label="Your ID:" 
-            label-for="input-3"
+            id="input_group_3" 
+            label="아이디:" 
+            label-for="input_3"
         >
             <b-form-input
-            id="input-3"
+            id="input_3"
             v-model="form.userId"
             placeholder="Enter ID"
             required
@@ -46,9 +46,11 @@
             </b-form-input>
         </b-form-group>
 
+        <b-button variant="outline-primary" id="submitbtn2">중복확인</b-button>
+
         <b-form-group 
-            id="input-group-4" 
-            label="Your Password:" 
+            id="input_group_4" 
+            label="패스워드:" 
             label-for="input-4"
         >
             <b-form-input
@@ -63,7 +65,7 @@
 
         <b-form-group 
             id="input-group-5" 
-            label="Password Check:" 
+            label="패스워드 확인:" 
             label-for="input-5"
         >
             <b-form-input
@@ -78,7 +80,7 @@
 
         <b-form-group 
             id="input-group-6" 
-            label="Your Birth" 
+            label="생년월일" 
             label-for="input-6"
         >
         <b-form-datepicker 
@@ -88,8 +90,8 @@
         </b-form-datepicker>
         </b-form-group>
 
-        <b-button variant="outline-primary" id="backbtn" href="/LoginPage">← Back</b-button>
-        <b-button variant="outline-primary" id="submitbtn" v-on:click="signUp" href="/LoginPage">Submit</b-button>
+        <b-button variant="outline-primary" id="backbtn" href="/LoginPage">← 뒤로가기</b-button>
+        <b-button variant="outline-primary" id="submitbtn" v-on:click="signUp" href="/LoginPage">확인</b-button>
     </b-form>
 
     </div>
@@ -159,6 +161,10 @@ export default {
         margin-left: 350px;
         margin-top: 20px;
     }
+    #submitbtn2 {
+        margin-left: 1110px;
+        margin-top: -98px;
+    }
     #h1 {
         margin-left: 700px;
         margin-top: 20px;
@@ -171,13 +177,13 @@ export default {
         margin-left: 700px;
         margin-top: 20px;
     }
-    #input-group-3 {
+    #input_group_3 {
         margin-left: 700px;
         margin-top: 20px;
     }
-    #input-group-4 {
+    #input_group_4 {
         margin-left: 700px;
-        margin-top: 20px;
+        margin-top: -10px;
     }
     #input-group-5 {
         margin-left: 700px;
@@ -194,8 +200,8 @@ export default {
     #input-2 {
         width: 500px;
     }
-    #input-3 {
-        width: 500px;
+    #input_3 {
+        width: 400px;
     }
     #input-4 {
         width: 500px;
