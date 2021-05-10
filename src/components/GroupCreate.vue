@@ -1,85 +1,81 @@
 <template>
     <div>
-        <h2>그룹 생성</h2>
-        <b-form @submit="onSubmit" @reset="onReset" v-if="show">
-            <b-form-group 
-                id="input-group-3" 
-                label="사업자 등록 번호:" 
-                label-for="input-3"
-            >
+        <h1 id="GroupCreate_h1">그룹 생성</h1>
+            <p id="input_number">사업자 등록 번호:</p>
                 <b-form-input
-                id="input-3"
-                v-model="form.rNumber"
-                placeholder="Enter Company Registration Number"
-                required
+                    id="input-3"
+                    v-model="form.rNumber"
+                    placeholder="Enter Company Registration Number"
+                    required
                 >
                 </b-form-input>
-            </b-form-group>
 
-            <b-form-group 
-                id="input-group-4" 
-                label="그룹명:" 
-                label-for="input-4"
-            >
+            <p id="input_gname">그룹명:</p>
                 <b-form-input
-                id="input-4"
-                v-model="form.gName"
-                placeholder="Enter Group Name"
-                required
+                    id="input-4"
+                    v-model="form.gName"
+                    placeholder="Enter Group Name"
+                    required
                 >
                 </b-form-input>
-            </b-form-group>
 
-            <b-form-group 
-                id="input-group-5" 
-                label="주소:" 
-                label-for="input-5"
-            >
+            <p id="input_address">주소:</p>
                 <b-form-input
-                id="input-5"
-                v-model="form.address"
-                placeholder="Enter Address"
-                required
+                    id="input-5"
+                    v-model="form.address"
+                    placeholder="Enter Address"
+                    required
                 >
                 </b-form-input>
-            </b-form-group>
-
-            <b-button variant="outline-primary" id="cancelbtn" href="http://localhost:8080/GroupList">Cancel</b-button>
-            <b-button variant="outline-primary" id="submitbtn">Submit</b-button>
-        </b-form>
+            <div style="text-align: center">
+                <b-button variant="outline-primary" id="cancelbtn" href="http://localhost:8080/GroupList">취소</b-button>
+                <b-button variant="outline-primary" id="submitbtn">확인</b-button>
+            </div>    
     </div>
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
     data() {
       return {
         form: {
-          id: '',
-          password: '',
+          rNumber: '',
+          gName: '',
           address: ''
         },
         show: true
       }
     },
     methods: {
-      onSubmit(event) {
-        event.preventDefault()
-        alert(JSON.stringify(this.form))
-      },
-      onReset(event) {
-        event.preventDefault()
-        // Reset our form values
-        this.form.id = ''
-        this.form.password = ''
-        this.form.address = ''
-        // Trick to reset/clear native browser form validation state
-        this.show = false
-        this.$nextTick(() => {
-          this.show = true
-        })
-      }
+    //   onSubmit(event) {
+    //     event.preventDefault()
+    //     alert(JSON.stringify(this.form))
+    //   },
+    //   onReset(event) {
+    //     event.preventDefault()
+    //     // Reset our form values
+    //     this.form.id = ''
+    //     this.form.password = ''
+    //     this.form.address = ''
+    //     // Trick to reset/clear native browser form validation state
+    //     this.show = false
+    //     this.$nextTick(() => {
+    //       this.show = true
+    //     })
+    //   }
+        create: function() {
+            axios.post("http://ec2-18-116-210-28.us-east-2.compute.amazonaws.com:9000/create",
+            {
+                rNumber: this.form.rNumber,
+                gName: this.form.gName,
+                address: this.form.address
+            })
+            .then(response => {
+                console.log(response.data);
+            });
+        }
     }
   }
 
@@ -88,17 +84,36 @@ export default {
 <style>
 
     #cancelbtn {
-        margin-left: 700px;
+        margin-left: -50px;
         margin-top: 20px;
     }
     #submitbtn {
+        margin-right: -50px;
         margin-top: 20px;
     }
-    h2 {
-        margin-left: 700px;
+    #GroupCreate_h1 {
+        text-align: center;
+        margin-right: 300px;
+        margin-top: 30px;
+        /* margin-left: 700px;
+        margin-top: 20px; */
+    }
+    #input_number {
+        text-align: center;
+        margin-right: 345px;
         margin-top: 20px;
     }
-    #input-group-3 {
+    #input_gname {
+        text-align: center;
+        margin-right: 415px;
+        margin-top: 20px;
+    }
+    #input_address {
+        text-align: center;
+        margin-right: 430px;
+        margin-top: 20px;
+    }
+    /* #input-group-3 {
         margin-left: 700px;
         margin-top: 20px;
     }
@@ -109,14 +124,17 @@ export default {
     #input-group-5 {
         margin-left: 700px;
         margin-top: 20px;
-    }
+    } */
     #input-3 {
-        width: 500px;
+        margin: 0 auto;
+        width: 465px;
     }
     #input-4 {
-        width: 500px;
+        margin: 0 auto;
+        width: 465px;
     }
     #input-5 {
-        width: 500px;
+        margin: 0 auto;
+        width: 465px;
     }
 </style>

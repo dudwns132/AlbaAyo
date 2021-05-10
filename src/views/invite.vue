@@ -1,7 +1,7 @@
 <template>
     <div class="invite">
-        <h1>그룹초대</h1>
-        <h3>초대 할 계정의 이메일 정보를 입력해주세요.</h3>
+        <h1 id="groupInvite">그룹초대</h1>
+        <h3 id="text_messeage1">초대 할 계정의 이메일 정보를 입력해주세요.</h3>
         <b-input-group prepend="E-mail" id="text-area">
             <b-form-input ></b-form-input>
             <b-input-group-append>
@@ -18,19 +18,25 @@ export default {
 </script>
 
 <style>
-    h1 {
+    #groupInvite {
         font-family: Arial, Helvetica, sans-serif;
-        margin-top: 75px;
-        margin-left: 525px;
+        text-align: center;
+        margin-top: 50px;
+        margin-right: 700px;
+        /* margin-top: 75px;
+        margin-left: 525px; */
     }
-    h3 {
+    #text_messeage1 {
         font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
         margin-top: 40px;
-        margin-left: 525px;
+        margin-right: 310px;
     }
     #text-area {
+        text-align: center;
+        margin: 0 auto;
         margin-top: 75px;
-        margin-left: 525px;
-        width: 900px;
+        /* margin-right: px; */
+        width: 860px;
     }
 </style>

@@ -1,13 +1,16 @@
 <template>
   <div id="app" class="GroupList">
-    <h1>그룹이 없으신가요? 또는 그룹을 생성하시겠습니까?</h1>
+    <h1 id="group_list_h1">그룹이 없으신가요? 또는 그룹을 생성하시겠습니까?</h1>
     <!-- <h1>Don't you have any Group? or create new Group?</h1> -->
-    <b-button variant="outline-primary" id="createbtn" href="http://localhost:8080/GroupCreate">그룹생성</b-button>
+    <div style="text-align: center">
+      <b-button variant="outline-primary" id="createbtn" href="http://localhost:8080/GroupCreate">그룹생성</b-button>
+    </div>
     <p></p>
+    <div style="text-algin: center">
      <b-container id="cont">
     <b-row>
-      <b-col cols="9">
-        <carousel :perPage="3">
+      <b-col cols="12">
+        <carousel :perPage="2">
           <slide class="p-2">
             <b-card title="Group Name 1" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top tag="article">
               <b-card-text>
@@ -48,6 +51,7 @@
     </b-row>
   </b-container>
   </div>
+  </div>
 </template>
 
 <script>
@@ -78,17 +82,16 @@ import { Carousel, Slide } from 'vue-carousel';
 </script>
 <style>
     #cont {
-      margin-left: 280px;
+      margin: 0 auto;
     }
     .row{
     margin-top:100px;
     }
-    h1 {
-        margin-left: 540px;
+    #group_list_h1 {
+        text-align: center;
         margin-top: 20px;
     }
     #createbtn {
-        margin-left: 900px;
         margin-top: 20px;
     }
 </style>

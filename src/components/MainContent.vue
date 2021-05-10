@@ -1,5 +1,5 @@
 <template>
-  <div class="MainContent">
+  <div style="text-align: center" class="MainContent" >
      <b-carousel
       id="carousel-1"
       v-model="slide"
@@ -9,7 +9,7 @@
       background="#ababab"
       img-width="800"
       img-height="600"
-      style="margin-top: 65px; margin-left: 570px; width: 800px; text-shadow: 1px 1px 2px #333;"
+      style="margin-top: 65px; width: 800px; text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
@@ -97,3 +97,9 @@
     // }
   }
 </script>
+<style>
+  #carousel-1 {
+    text-align: center;
+    margin: 0 auto;
+  }
+</style>

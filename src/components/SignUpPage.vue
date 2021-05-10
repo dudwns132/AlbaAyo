@@ -1,99 +1,68 @@
 <template>
     <div class="SignUpPage">
-        <h1 id="h1">회원가입</h1>
-        <b-form @submit="onSubmit" @reset="onReset" v-if="show">
-        <b-form-group
-            id="input-group-1"
-            label="이메일 주소:"
-            label-for="input-1"
-            description="We'll never share your email with anyone else."
-        >
+        <h1 id="signUp_h1">회원가입</h1>
+        <p id="signup_input_email">이메일 주소:</p>
+            <!-- description="We'll never share your email with anyone else." -->
             <b-form-input
-                id="input-1"
+                id="signup_input-1"
                 v-model="form.email"
                 type="email"
                 placeholder="Enter email"
                 required
             >
             </b-form-input>
-        </b-form-group>
 
-        <b-form-group 
-            id="input-group-2" 
-            label="이름:" 
-            label-for="input-2"
-        >
+        <p id="signup_input_name">이름:</p>
             <b-form-input
-            id="input-2"
-            v-model="form.name"
-            placeholder="Enter name"
-            required
+                id="signup_input-2"
+                v-model="form.name"
+                placeholder="Enter name"
+                required
             >
             </b-form-input>
-        </b-form-group>
-
-        <b-form-group 
-            id="input_group_3" 
-            label="아이디:" 
-            label-for="input_3"
-        >
+        <div style="text-align:center">
+        <p id="signup_input_id">아이디:</p>
             <b-form-input
-            id="input_3"
-            v-model="form.userId"
-            placeholder="Enter ID"
-            required
+                id="signup_input_3"
+                v-model="form.userId"
+                placeholder="Enter ID"
+                required
             >
             </b-form-input>
-        </b-form-group>
+            <b-button variant="outline-primary" id="submitbtn2">중복확인</b-button>
+        </div>
 
-        <b-button variant="outline-primary" id="submitbtn2">중복확인</b-button>
-
-        <b-form-group 
-            id="input_group_4" 
-            label="패스워드:" 
-            label-for="input-4"
-        >
+        <p id="signup_input_password">패스워드:</p>
             <b-form-input
-            id="input-4"
-            v-model="form.password"
-            placeholder="Enter Password"
-            required
-            type="password"
+                id="signup_input-4"
+                v-model="form.password"
+                placeholder="Enter Password"
+                required
+                type="password"
             >
             </b-form-input>
-        </b-form-group>
 
-        <b-form-group 
-            id="input-group-5" 
-            label="패스워드 확인:" 
-            label-for="input-5"
-        >
+        <p id="signup_input_password_check">패스워드 확인:</p>
             <b-form-input
-            id="input-5"
-            v-model="form.passwordcheck"
-            placeholder="Enter Password again"
-            required
-            type="password"
+                id="signup_input-5"
+                v-model="form.passwordcheck"
+                placeholder="Enter Password again"
+                required
+                type="password"
             >
             </b-form-input>
-        </b-form-group>
 
-        <b-form-group 
-            id="input-group-6" 
-            label="생년월일" 
-            label-for="input-6"
-        >
-        <b-form-datepicker 
-            id="input-6" 
-            v-model="value" 
-        >
-        </b-form-datepicker>
-        </b-form-group>
-
-        <b-button variant="outline-primary" id="backbtn" href="/LoginPage">← 뒤로가기</b-button>
-        <b-button variant="outline-primary" id="submitbtn" v-on:click="signUp" href="/LoginPage">확인</b-button>
-    </b-form>
-
+        <p id="signup_input_birth">생년월일:</p>
+            <b-form-datepicker 
+                id="signup_input-6" 
+                v-model="value" 
+                size="200px"
+            >
+            </b-form-datepicker>
+        <div style="text-align: center">
+            <b-button variant="outline-primary" id="signup_backbtn" href="/LoginPage">← 뒤로가기</b-button>
+            <b-button variant="outline-primary" id="signup_submitbtn" v-on:click="signUp" href="/LoginPage">확인</b-button>
+        </div>
     </div>
 </template>
 
@@ -153,63 +122,76 @@ export default {
 
 <style>
 
-    #backbtn {
-        margin-left: 700px;
+    #signup_backbtn {
+        margin-right: 333px;
         margin-top: 20px;
     }
-    #submitbtn {
-        margin-left: 350px;
+    #signup_submitbtn {
+        /* margin-left: 350px; */
         margin-top: 20px;
     }
     #submitbtn2 {
-        margin-left: 1110px;
-        margin-top: -98px;
+        margin-left: 605px;
+        margin-top: -65px;
     }
-    #h1 {
-        margin-left: 700px;
+    #signUp_h1 {
+        text-align: center;
+        margin-right: 350px;
+        margin-top: 30px;
+        /* margin-left: 700px;
+        margin-top: 20px; */
+    }
+    #signup_input_email {
+        text-align: center;
+        margin-right: 415px;
         margin-top: 20px;
     }
-    #input-group-1 {
-        margin-left: 700px;
+    #signup_input_name {
+        text-align: center;
+        margin-right: 465px;
         margin-top: 20px;
     }
-    #input-group-2 {
-        margin-left: 700px;
+    #signup_input_id {
+        text-align: center;
+        margin-right: 445px;
         margin-top: 20px;
     }
-    #input_group_3 {
-        margin-left: 700px;
+    #signup_input_password {
+        text-align: center;
+        margin-right: 434px;
+    }
+    #signup_input_password_check {
+        text-align: center;
+        margin-right: 395px;
         margin-top: 20px;
     }
-    #input_group_4 {
-        margin-left: 700px;
-        margin-top: -10px;
-    }
-    #input-group-5 {
-        margin-left: 700px;
+    #signup_input_birth {
+        text-align: center;
+        margin-right: 430px;
         margin-top: 20px;
-    }
-    #input-group-6 {
-        margin-left: 700px;
-        margin-top: 20px;
+    }   
+    #signup_input-1 {
+        margin: 0 auto;
         width: 500px;
     }
-    #input-1 {
+    #signup_input-2 {
+        margin: 0 auto;
         width: 500px;
     }
-    #input-2 {
+    #signup_input_3 {
+        margin: 0 auto;
         width: 500px;
     }
-    #input_3 {
-        width: 400px;
-    }
-    #input-4 {
+    #signup_input-4 {
+        margin: 0 auto;
         width: 500px;
     }
-    #input-5 {
+    #signup_input-5 {
+        margin: 0 auto;
         width: 500px;
     }
-    #input-6 {
-        width: 200px;
+    #signup_input-6__outer_ {
+        margin: 0 auto;
+        width: 500px;
     }
 </style>

@@ -242,7 +242,7 @@ export default {
         font-size: 40px;
         color: white;
         font-family: 'Yu Gothic';
-        display: flex;
+        /* display: flex; */
     }
     /* 로그인 버튼 */
     #login {
