@@ -28,8 +28,8 @@
                 >
                 </b-form-input>
             <div style="text-align: center">
-                <b-button variant="outline-primary" id="cancelbtn" href="http://localhost:8080/GroupList">취소</b-button>
-                <b-button variant="outline-primary" id="submitbtn">확인</b-button>
+                <b-button variant="outline-primary" id="cancelbtn" href="/GroupList">취소</b-button>
+                <b-button variant="outline-primary" id="submitbtn" onClick="create" href="/GroupCreate">확인</b-button>
             </div>    
     </div>
 </template>
@@ -66,7 +66,7 @@ export default {
     //     })
     //   }
         create: function() {
-            axios.post("http://ec2-18-116-210-28.us-east-2.compute.amazonaws.com:9000/create",
+            axios.post("http://ec2-18-116-210-28.us-east-2.compute.amazonaws.com:9000//create",
             {
                 rNumber: this.form.rNumber,
                 gName: this.form.gName,
@@ -84,11 +84,10 @@ export default {
 <style>
 
     #cancelbtn {
-        margin-left: -50px;
+        margin-right: 350px;
         margin-top: 20px;
     }
     #submitbtn {
-        margin-right: -50px;
         margin-top: 20px;
     }
     #GroupCreate_h1 {

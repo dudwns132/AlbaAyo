@@ -5,6 +5,10 @@ import LoginPage from './components/LoginPage.vue'
 import SignUpPage from './components/SignUpPage.vue'
 import GroupList from './components/GroupList.vue'
 import GroupCreate from './components/GroupCreate.vue'
+import Notice from './components/Notice.vue'
+import NoticeCreate from './components/NoticeCreate.vue'
+import NoticeDetail from './components/NoticeDetail.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -49,6 +53,21 @@ export default new Router({
             path: '/GroupCreate',
             name: 'GroupCreate',
             component: GroupCreate
+        },
+        {
+            path: '/Notice',
+            name: 'Notice',
+            component: Notice
+        },
+        {
+            path: '/NoticeCreate',
+            name: 'NoticeCreate',
+            component: NoticeCreate
+        },
+        {
+            path: '/NoticeDetail/:contentId',
+            name: 'NoticeDetail',
+            component: NoticeDetail
         }
     ]
 })

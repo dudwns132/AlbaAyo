@@ -10,7 +10,7 @@
      <b-container id="cont">
     <b-row>
       <b-col cols="12">
-        <carousel :perPage="2">
+        <carousel :perPage="3">
           <slide class="p-2">
             <b-card title="Group Name 1" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top tag="article">
               <b-card-text>

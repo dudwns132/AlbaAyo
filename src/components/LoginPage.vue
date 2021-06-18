@@ -1,5 +1,19 @@
 <template>
     <div>
+        <v-alert
+            class="mb-3"
+            :value="isLoginError"
+            type="error"
+        >
+        가입하지 않은 아이디이거나 잘못된 비밀번호입니다.
+        </v-alert>
+        <v-alert
+            class="mb-3"
+            :value="isLogin"
+            type="success"
+        >
+        로그인이 완료되었습니다.
+        </v-alert>
         <h1 id="signIn_h1">로그인</h1>
             <p id="input_id">아이디: </p>   
                 <b-form-input
@@ -19,15 +33,32 @@
                 >
                 </b-form-input>
         <div style="text-align: center">
-            <b-button variant="outline-primary" id="signIn_singupbtn" href="/SignUpPage">회원가입</b-button>
-            <b-button variant="outline-primary" id="signIn_submitbtn" v-on:click="login" >확인</b-button>
+            <b-button 
+                variant="outline-primary" 
+                id="signIn_singupbtn" 
+                href="/SignUpPage" 
+            >
+                회원가입
+            </b-button>
+
+            <b-button 
+                variant="outline-primary" 
+                id="signIn_submitbtn" 
+                v-on:click="login({
+                    userId: form.userId,
+                    passoword: form.password 
+                })"
+            >
+                로그인
+            </b-button>
         </div>
     </div>
    
 </template>
 
 <script>
-import axios from 'axios'
+import { mapState, mapActions } from "vuex"
+// import axios from 'axios'
 
 export default {
     data() { 
@@ -36,20 +67,25 @@ export default {
           userId: '',
           password: ''
         },
+        
         show: true
       }
     },
+    computed: {
+        ...mapState(["isLogin", "isLoginError"])
+    },
     methods: {
-      login: function() {
-          axios.post("http://ec2-18-116-210-28.us-east-2.compute.amazonaws.com:9000/login",
-         {
-            userId: this.form.userId,
-            password: this.form.password
-         })
-         .then(response => {
-                  console.log(response.data);
-              });
-      }
+        ...mapActions(['login']),
+    //   login: function() {
+    //       axios.post("http://ec2-18-116-210-28.us-east-2.compute.amazonaws.com:9000/login",
+    //      {
+    //         userId: this.form.userId,
+    //         password: this.form.password
+    //      })
+    //      .then(response => {
+    //               console.log(response.data);
+    //           });
+    //   }
     }
   }
 </script>
@@ -57,7 +93,7 @@ export default {
 <style>
     
     #signIn_singupbtn {
-        margin-right: 350px;
+        margin-right: 335px;
         margin-top: 20px;
     }
     #signIn_submitbtn {

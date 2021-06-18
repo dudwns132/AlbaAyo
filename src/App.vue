@@ -10,8 +10,9 @@
             <h4>{{ title }}</h4>
         </div>
         
-        <b-button id="login">
-                <a href="http://localhost:8080/LoginPage"><img alt="login button" src="./img/loginbtn.png" width="100"></a>
+        <b-button 
+            id="login">
+                <a href="/LoginPage"><img alt="login button" src="./img/loginbtn.png" width="100"></a>
         </b-button>
         <b-sidebar 
             id="sidebar-1"
@@ -44,7 +45,7 @@
                     <v-list-item-title>그룹관리</v-list-item-title>
                     </template>
 
-                    <v-list-item id="menu1" href="http://localhost:8080/invite">
+                    <v-list-item id="menu1" href="/invite">
                         <v-list-item-icon>
                             <v-icon>mdi-account-plus-outline</v-icon>
                         </v-list-item-icon>
@@ -52,7 +53,7 @@
                         <v-list-item-title>그룹초대</v-list-item-title>
                     </v-list-item>
 
-                    <v-list-item id="menu2" href="http://localhost:8080/GroupList">
+                    <v-list-item id="menu2" href="/GroupList">
                         <v-list-item-icon>
                             <v-icon>mdi-format-list-text</v-icon>
                         </v-list-item-icon>
@@ -115,7 +116,7 @@
                     <v-list-item-title>그룹채팅</v-list-item-title>
                 </v-list-item>
 
-                <v-list-item href="http://localhost:8080/schedule">
+                <v-list-item href="/schedule">
                     <v-list-item-icon>
                     <v-icon>mdi-calendar</v-icon>
                     </v-list-item-icon>
@@ -136,10 +137,10 @@
                     <v-icon>mdi-cash-check</v-icon>
                     </v-list-item-icon>
 
-                    <v-list-item-title>월급조회</v-list-item-title>
+                    <v-list-item-title>급여조회</v-list-item-title>
                 </v-list-item>
 
-                <v-list-item link="">
+                <v-list-item href="/Notice">
                     <v-list-item-icon>
                     <v-icon>mdi-bulletin-board</v-icon>
                     </v-list-item-icon>
