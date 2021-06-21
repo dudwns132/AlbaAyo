@@ -60,7 +60,7 @@ export default new Router({
             component: Notice
         },
         {
-            path: '/NoticeCreate',
+            path: '/NoticeCreate/:contentId?',
             name: 'NoticeCreate',
             component: NoticeCreate
         },
