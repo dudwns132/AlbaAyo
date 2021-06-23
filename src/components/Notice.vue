@@ -1,6 +1,7 @@
 <template>
     <div id="pageName">
-        <h1 id="pageNameContent">공지사항</h1>
+        <h1>공지사항</h1>
+        <b-button id="create_btn" @click="writeContent">글쓰기</b-button>
         <b-table 
             id="Notice-table" 
             striped hover 
@@ -14,7 +15,6 @@
             :total-rows="rows"
             :per-page="perPage"
         ></b-pagination>
-        <b-button id="create_btn" @click="writeContent">글쓰기</b-button>
         <!-- <table>
             <tr>
                 <td>글쓴이</td>
@@ -109,17 +109,19 @@ export default {
 <style>
     #pageName {
         margin-left: 75px;
-        margin-top: 75px;
+        margin-top: 15px;
         font-weight: 700;
     }
 
     #Notice-table {
-        margin-top: 50px;
+        /* margin-top: 5px; */
         width: 1500px;
+        /* margin: auto; */
     }
 
     #create_btn {
-        margin-top: 10px;
-        margin-left: 750px;
+        margin-top: -80px;
+        margin-left: 1400px;
+        text-align: right;
     }
 </style>

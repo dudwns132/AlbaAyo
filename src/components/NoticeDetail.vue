@@ -31,21 +31,21 @@
       <div class="content-detail-button-delete">
         <b-button variant="success" @click="deleteData">삭제</b-button>
       </div>
-      <div class="content-detail-comment">
+      <!-- <div class="content-detail-comment">
         <Comment :contentId="contentId"/>
-      </div>
+      </div> -->
     </b-card>
   </div>
 </template>
 
 <script>
 import data from "@/data";
-import Comment from "./Comment"
+// import Comment from "./Comment"
 
 export default {
   name: "NoticeDetail",
   components: {
-    Comment
+    // Comment
   },
   data() {
     const contentId = Number(this.$route.params.contentId);
@@ -97,7 +97,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   padding: 1rem;
 }
 .content-detail-content {

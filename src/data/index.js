@@ -258,14 +258,6 @@ export default {
           created_at: '2021-06-18 13:11:42',
           updated_at: null
         },
-        {
-          content_id: 30,
-          user_id: 4,
-          title: '소환사의 협곡에 오신것을 환영합니다',
-          context: '^^',
-          created_at: '2021-06-18 13:11:42',
-          updated_at: null
-        },
       ],
       Comment: [
         {

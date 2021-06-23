@@ -26,27 +26,28 @@
         </template>
       </b-carousel-slide>
 
-      <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="https://picsum.photos/800/600/?image=52"
-        img-width="800"
-        img-height="600"
-      ></b-carousel-slide>
-
-      <!-- Slides with custom text -->
-      <b-carousel-slide 
-        img-src="https://picsum.photos/800/600/?image=54"
-        img-width="800"
-        img-height="600">
-        <h1>Hello world!</h1>
+      <b-carousel-slide>
+        <template #img>
+        <img
+          caption="First slide"
+          text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+          src="../img/main2.png"
+          width="800"
+          height="600"
+        >
+        </template>
       </b-carousel-slide>
 
-      <!-- Slides with image only -->
-      <b-carousel-slide 
-        img-src="https://picsum.photos/800/600/?image=58"
-        img-width="800"
-        img-height="600">
+      <!-- Slides with custom text -->
+      <b-carousel-slide >
+        <template #img>
+        <img
+          src="https://www.foodnews.news/data/photos/20200624/art_15918374067968_096a43.png"
+          width="800"
+          height="600"
+        >
+        </template>
+        <!-- <h1>Hello world!</h1> -->
       </b-carousel-slide>
 
       <!-- Slides with img slot -->
@@ -54,22 +55,21 @@
       <b-carousel-slide>
         <template #img>
           <img
-            class="d-block img-fluid w-100"
             width="800"
             height="600"
-            src="https://picsum.photos/800/600/?image=55"
+            src="https://blog.kakaocdn.net/dn/KcxQN/btqtXW2ZWah/or4dQhEx9gFo6CXphJ1AX1/img.jpg"
             alt="image slot"
           >
         </template>
       </b-carousel-slide>
 
       <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-      <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
+      <!-- <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
           a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
         </p>
-      </b-carousel-slide>
+      </b-carousel-slide> -->
     </b-carousel>
 
     <!-- <p class="mt-4">

@@ -7,7 +7,7 @@
     >
       <template v-slot:top>
           <v-toolbar flat>
-              <v-toolbar-title>Staff List</v-toolbar-title>
+              <v-toolbar-title>직원목록</v-toolbar-title>
               <v-divider
                 class="mx-4"
                 inset
@@ -152,7 +152,7 @@ export default {
                 value: 'name'
             },
             { text: 'Age', value: 'age'},
-            { text: 'Position', value: 'position'},
+            // { text: 'Position', value: 'position'},
             { text: 'Career(month)', value: 'career'},
             // { text: 'Actions', value: 'actions', sortable: false},
         ],
@@ -278,5 +278,10 @@ export default {
 }
 </script>
 <style>
-    
+.elevation-1 {
+    /* margin-top: 50px;
+    margin-left: 400px; */
+    width: 1200px;
+    margin: auto;
+}
 </style>
