@@ -22,6 +22,9 @@
       <div class="content-detail-content">
         {{context}}
       </div>
+      <div class="content-back-button">
+        <b-button variant="outline-primary" href="/Notice">뒤로가기</b-button>  
+      </div>      
       <div class="content-detail-button-update">
         <b-button variant="primary" @click="updateData">수정</b-button>
       </div>
@@ -29,7 +32,7 @@
         <b-button variant="success" @click="deleteData">삭제</b-button>
       </div>
       <div class="content-detail-comment">
-        덧글
+        <Comment :contentId="contentId"/>
       </div>
     </b-card>
   </div>
@@ -37,8 +40,13 @@
 
 <script>
 import data from "@/data";
+import Comment from "./Comment"
+
 export default {
   name: "NoticeDetail",
+  components: {
+    Comment
+  },
   data() {
     const contentId = Number(this.$route.params.contentId);
     const contentData = data.Content.filter(item => item.content_id === contentId)[0]
@@ -102,7 +110,7 @@ export default {
 }
 .content-detail-button-update {
   /* border: 1px solid black; */
-  margin-top: 5px;
+  margin-top: -70px;
   padding: 2rem;
   width: 1000px;
   margin-left: 1235px;
@@ -122,5 +130,10 @@ export default {
   padding: 2rem;
   width: 1000px;
   margin-left: 400px;
+}
+
+.content-back-button {
+  margin-left: 400px;
+  margin-top: 20px;
 }
 </style>
