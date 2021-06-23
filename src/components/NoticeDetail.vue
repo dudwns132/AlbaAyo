@@ -103,7 +103,8 @@ export default {
 .content-detail-content {
   border: 1px solid black;
   margin-top: 1rem;
-  padding-top: 1rem;
+  padding-top: 30px;
+  padding-left: 30px;
   min-height: 500px;
   width: 1000px;
   margin-left: 400px;

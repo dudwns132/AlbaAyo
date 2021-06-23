@@ -12,7 +12,7 @@
         
         <b-button 
             id="login">
-                <a href="/LoginPage"><img alt="login button" src="./img/loginbtn.png" width="100"></a>
+                <a href="/LoginPage"><img alt="login button" src="./img/Group 35.png" width="100"></a>
         </b-button>
         <b-sidebar 
             id="sidebar-1"
