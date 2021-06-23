@@ -8,6 +8,7 @@ import GroupCreate from './components/GroupCreate.vue'
 import Notice from './components/Notice.vue'
 import NoticeCreate from './components/NoticeCreate.vue'
 import NoticeDetail from './components/NoticeDetail.vue'
+import StaffList from './components/StaffList.vue'
 
 Vue.use(Router)
 
@@ -68,6 +69,11 @@ export default new Router({
             path: '/NoticeDetail/:contentId',
             name: 'NoticeDetail',
             component: NoticeDetail
+        },
+        {
+            path: '/StaffList',
+            name: 'StaffList',
+            component: StaffList
         }
     ]
 })

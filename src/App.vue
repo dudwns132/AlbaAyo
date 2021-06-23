@@ -124,7 +124,7 @@
                     <v-list-item-title>일정</v-list-item-title>
                 </v-list-item>
 
-                <v-list-item link="">
+                <v-list-item href="/StaffList">
                     <v-list-item-icon>
                     <v-icon>mdi-account-multiple</v-icon>
                     </v-list-item-icon>
