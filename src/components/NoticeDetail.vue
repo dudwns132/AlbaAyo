@@ -23,7 +23,7 @@
         {{context}}
       </div>
       <div class="content-back-button">
-        <b-button variant="outline-primary" href="/Notice">뒤로가기</b-button>  
+        <b-button variant="outline-primary" router :to="{ name: 'Notice' }">뒤로가기</b-button>  
       </div>      
       <div class="content-detail-button-update">
         <b-button variant="primary" @click="updateData">수정</b-button>

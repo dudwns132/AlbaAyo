@@ -60,8 +60,8 @@
             >
             </b-form-datepicker>
         <div style="text-align: center">
-            <b-button variant="outline-primary" id="signup_backbtn" href="/LoginPage">← 뒤로가기</b-button>
-            <b-button variant="outline-primary" id="signup_submitbtn" v-on:click="signUp" href="/LoginPage">확인</b-button>
+            <b-button variant="outline-primary" id="signup_backbtn" router :to="{ name: 'LoginPage' }">← 뒤로가기</b-button>
+            <b-button variant="outline-primary" id="signup_submitbtn" v-on:click="signUp" router :to="{ name: 'LoginPage' }">확인</b-button>
         </div>
     </div>
 </template>

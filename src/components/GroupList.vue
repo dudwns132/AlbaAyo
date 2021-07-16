@@ -3,7 +3,7 @@
     <h1 id="group_list_h1">그룹이 없으신가요? 또는 그룹을 생성하시겠습니까?</h1>
     <!-- <h1>Don't you have any Group? or create new Group?</h1> -->
     <div style="text-align: center">
-      <b-button variant="outline-primary" id="createbtn" href="http://localhost:8080/GroupCreate">그룹생성</b-button>
+      <b-button variant="outline-primary" id="createbtn" router :to="{ name: 'GroupCreate' }">그룹생성</b-button>
     </div>
     <p></p>
     <div style="text-algin: center">

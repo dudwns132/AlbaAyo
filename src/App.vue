@@ -11,8 +11,10 @@
         </div>
         
         <b-button 
-            id="login">
-                <a href="/LoginPage"><img alt="login button" src="./img/Group 35.png" width="100"></a>
+            id="login"
+            router
+            :to="{ name: 'LoginPage' }">
+                <img alt="login button" src="./img/Group 35.png" width="100">
         </b-button>
         <b-sidebar 
             id="sidebar-1"
@@ -29,7 +31,9 @@
                 tile
             >
                 <v-list shaped>
-                <v-list-item href="http://localhost:8080/">
+                <v-list-item 
+                router
+                :to="{ name: 'MainContent'}">
                     <v-list-item-icon>
                     <v-icon >mdi-home</v-icon>
                     </v-list-item-icon>
@@ -45,7 +49,9 @@
                     <v-list-item-title>그룹관리</v-list-item-title>
                     </template>
 
-                    <v-list-item id="menu1" href="/invite">
+                    <v-list-item id="menu1" 
+                    router
+                    :to="{ name: 'invite' }">
                         <v-list-item-icon>
                             <v-icon>mdi-account-plus-outline</v-icon>
                         </v-list-item-icon>
@@ -53,7 +59,9 @@
                         <v-list-item-title>그룹초대</v-list-item-title>
                     </v-list-item>
 
-                    <v-list-item id="menu2" href="/GroupList">
+                    <v-list-item id="menu2" 
+                    router
+                    :to="{ name: 'GroupList' }">
                         <v-list-item-icon>
                             <v-icon>mdi-format-list-text</v-icon>
                         </v-list-item-icon>
@@ -116,7 +124,9 @@
                     <v-list-item-title>그룹채팅</v-list-item-title>
                 </v-list-item>
 
-                <v-list-item href="/schedule">
+                <v-list-item 
+                router
+                :to="{ name: 'Schedule' }">
                     <v-list-item-icon>
                     <v-icon>mdi-calendar</v-icon>
                     </v-list-item-icon>
@@ -124,7 +134,9 @@
                     <v-list-item-title>일정</v-list-item-title>
                 </v-list-item>
 
-                <v-list-item href="/StaffList">
+                <v-list-item 
+                router
+                :to="{ name: 'StaffList' }">
                     <v-list-item-icon>
                     <v-icon>mdi-account-multiple</v-icon>
                     </v-list-item-icon>
@@ -140,7 +152,9 @@
                     <v-list-item-title>급여조회</v-list-item-title>
                 </v-list-item>
 
-                <v-list-item href="/Notice">
+                <v-list-item 
+                router
+                :to="{ name: 'Notice' }">
                     <v-list-item-icon>
                     <v-icon>mdi-bulletin-board</v-icon>
                     </v-list-item-icon>
@@ -173,6 +187,7 @@
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import { mapState } from "vuex";
 // import MainContent from './components/MainContent.vue'
 // import Schedule from './views/Schedule.vue'
 // import LoginPage from  './components/LoginPage.vue'
@@ -202,6 +217,9 @@ export default {
 
             ]
         }
+    },
+    computed: {
+        ...mapState(["isLogin"]),
     },
 };
 </script>

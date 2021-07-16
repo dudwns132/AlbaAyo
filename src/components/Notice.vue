@@ -15,20 +15,6 @@
             :total-rows="rows"
             :per-page="perPage"
         ></b-pagination>
-        <!-- <table>
-            <tr>
-                <td>글쓴이</td>
-                <td>제목</td>
-                <td>내용</td>
-            </tr>
-            <tr :key="index" v-for="(value, index) in data" @click="detail(index)">
-                <td>{{value.writer}}</td>
-                <td>{{value.title}}</td>
-                <td>{{value.content}}</td>
-            </tr>
-        </table>
-        <b-button @click="write">글쓰기</b-button> -->
-        <!-- <a href="javascript:;" @click="getList">GET 방식 데이터 접근</a> -->
     </div>
 </template>
 
