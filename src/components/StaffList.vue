@@ -230,6 +230,7 @@ export default {
                     position: '서빙',
                     career: 6
                 },
+                
             ]
         },
 
