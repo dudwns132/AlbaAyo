@@ -6,13 +6,13 @@
             <b-form-input ></b-form-input>
             <b-input-group-append>
                 <b-button v-b-toggle.collapse-3 class="m-1" variant="outline-success">조회</b-button>
-                <b-collapse visible id="collapse-3">
+                <!-- <b-collapse visible id="collapse-3">
                     <b-card>
                         <p>이름 : 박영준</p>
                         <p>나이 : 25</p>
                         <p>아이디: qkrdudwns132</p>
                     </b-card>
-                </b-collapse>
+                </b-collapse> -->
             </b-input-group-append>
         </b-input-group>
     </div>
@@ -45,5 +45,6 @@ export default {
         margin-top: 75px;
         /* margin-right: px; */
         width: 860px;
+        height: 40px;
     }
 </style>

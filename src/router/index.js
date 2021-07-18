@@ -109,7 +109,13 @@ const routes = [
         beforeEnter: onlyAuthUser,
         component: () =>
             import(/* webpackChunkName: "mypage*/ "../views/Mypage.vue"),
-      },
+    },
+    {
+        path: "/Intro",
+        name: "Intro",
+        component: () =>
+            import(/* webpackChunkName: "mypage*/ "../components/Intro.vue"),
+    },
 ]
 
   

@@ -51,13 +51,13 @@ export default new Vuex.Store({
         commit("loginError");
       else {
         commit("loginSuccess", selectedUser);
-        router.push({ name: "mypage" });
+        router.push({ name: "MainContent" });
       }
       // 그 유저의 비밀번호와 입력된 비밀번호를 비교한다.
     },
     logout({ commit }) {
       commit("logout");
-      router.push({ name: "Home" });
+      router.push({ name: "MainContent" });
     },
   },
   modules: {},

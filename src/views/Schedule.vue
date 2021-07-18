@@ -4,10 +4,10 @@
       <div class='demo-app-sidebar-section'>
         <h2>사용지침</h2>
         <ul>
-          <li>원하는 날짜를 선택하면 새 이벤트를 생성할수 있습니다.</li>
-          <li>일정을 드래그, 드롭하여 크기를 조정할수 있습니다.</li>
-          <li>일정을 지우고 싶으면 일정을 클릭하면 됩니다.</li>
-          <li>월/주/일 단위로 보기가 가능하며 주,일 단위 달력에서 시간 설정가능합니다.</li>
+          <li id="li2">원하는 날짜를 선택하면 새 이벤트를 생성할수 있습니다.</li>
+          <li id="li2">일정을 드래그, 드롭하여 크기를 조정할수 있습니다.</li>
+          <li id="li2">일정을 지우고 싶으면 일정을 클릭하면 됩니다.</li>
+          <li id="li2">월/주/일 단위로 보기가 가능하며 주,일 단위 달력에서 시간 설정가능합니다.</li>
         </ul>
       </div>
       <div class='demo-app-sidebar-section'>
@@ -23,7 +23,7 @@
       <div class='demo-app-sidebar-section'>
         <h2>모든 일정 ({{ currentEvents.length }})</h2>
         <ul>
-          <li v-for='event in currentEvents' :key='event.id'>
+          <li id="li2" v-for='event in currentEvents' :key='event.id'>
             <b>{{ event.startStr }}</b>
             <i>{{ event.title }}</i>
           </li>
@@ -128,7 +128,7 @@ ul {
   margin: 0;
   padding: 0 0 0 1.5em;
 }
-li {
+#li2 {
   margin: 1.5em 0;
   padding: 0;
 }
