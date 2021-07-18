@@ -18,7 +18,7 @@
             <p id="input_id">아이디: </p>   
                 <b-form-input
                     id="signIn_input-3"
-                    v-model="form.userId"
+                    v-model="email"
                     placeholder="Enter ID"
                     required
                 >
@@ -26,7 +26,7 @@
             <p id="input_password">비밀번호: </p>
                 <b-form-input
                     id="signIn_input-4"
-                    v-model="form.password"
+                    v-model="password"
                     placeholder="Enter Password"
                     required
                     type="password"
@@ -36,7 +36,8 @@
             <b-button 
                 variant="outline-primary" 
                 id="signIn_singupbtn" 
-                href="/SignUpPage" 
+                router
+                :to="{ name: 'SignUpPage' }"
             >
                 회원가입
             </b-button>
@@ -44,10 +45,7 @@
             <b-button 
                 variant="outline-primary" 
                 id="signIn_submitbtn" 
-                v-on:click="login({
-                    userId: form.userId,
-                    passoword: form.password 
-                })"
+                v-on:click="login({ email, password })"
             >
                 로그인
             </b-button>
@@ -57,35 +55,21 @@
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex"
+import { mapState, mapActions } from "vuex";
 // import axios from 'axios'
 
 export default {
     data() { 
       return {
-        form: {
-          userId: '',
-          password: ''
-        },
-        
-        show: true
+          email: null,
+          password: null
       }
     },
     computed: {
         ...mapState(["isLogin", "isLoginError"])
     },
     methods: {
-        ...mapActions(['login']),
-    //   login: function() {
-    //       axios.post("http://ec2-18-116-210-28.us-east-2.compute.amazonaws.com:9000/login",
-    //      {
-    //         userId: this.form.userId,
-    //         password: this.form.password
-    //      })
-    //      .then(response => {
-    //               console.log(response.data);
-    //           });
-    //   }
+        ...mapActions(["login"]),
     }
   }
 </script>

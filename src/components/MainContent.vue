@@ -80,12 +80,17 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
   export default {
     data() {
       return {
         slide: 0,
         sliding: null
       }
+    },
+    computed: {
+    ...mapState(["isLogin"]),
     },
     // methods: {
     //   onSlideStart(slide) {
