@@ -51,7 +51,7 @@ export default new Vuex.Store({
         commit("loginError");
       else {
         commit("loginSuccess", selectedUser);
-        router.push({ name: "MainContent" });
+        router.push({ name: "GroupList" });
       }
       // 그 유저의 비밀번호와 입력된 비밀번호를 비교한다.
     },
