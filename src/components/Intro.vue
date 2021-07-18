@@ -4,34 +4,33 @@
             <ul class="nav-menu2">
                 <li>
                     <a data-scroll="section-1" href="#section-1" class="dot">
-                        <span>Home</span>
+                        <span>블록체인</span>
                     </a>
                 </li>
                 <li>
                     <a data-scroll="section-2" href="#section-2" class="dot">
-                        <span>one</span>
+                        <span>그룹화</span>
                     </a>
                 </li>
                 <li>
                     <a data-scroll="section-3" href="#section-3" class="dot">
-                        <span>two</span>
+                        <span>모바일</span>
                     </a>
                 </li>
                 <li>
                     <a data-scroll="section-4" href="#section-4" class="dot">
-                        <span>Three</span>
-                    </a>
-                </li>
-                <li>
-                    <a data-scroll="section-5" href="#section-5" class="dot">
-                        <span>Four</span>
+                        <span>Profile</span>
                     </a>
                 </li>
             </ul>
         </nav>
         <div class="section">
             <section id="section-1">
-                <h3>SECTION 1</h3>
+                <br><br><br>
+                <h3 id="section_title" style="font-family: bamin;" >블록체인 시스템 도입</h3>
+                <br><br><br>
+                <img src="../img/blockchain.png">
+                <br><br><br>
                 <p class="padding-top10">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     Lorem
                     Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
@@ -46,7 +45,11 @@
                 </p>
             </section>
             <section id="section-2">
-                <h3>SECTION 2</h3>
+                <br><br><br><br><br><br><br>
+                <h3 id="section_title" style="font-family: bamin;">그룹화</h3>
+                <br><br><br>
+                <img src="../img/Grouping.png">
+                <br><br><br>
                 <p class="padding-top10">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     Lorem
                     Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
@@ -60,7 +63,11 @@
                     desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </section>
             <section id="section-3">
-                <h3>SECTION 3</h3>
+                <br><br><br><br>
+                <h3 id="section_title" style="font-family: bamin;">위치기반 서비스를 이용한 실시간 모니터링 WITH Mobile</h3>
+                <br><br><br>
+                <img src="../img/LocationCheck.png">
+                <br><br><br>
                 <p class="padding-top10">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     Lorem
                     Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
@@ -74,21 +81,11 @@
                     desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </section>
             <section id="section-4">
-                <h3>SECTION 4</h3>
-                <p class="padding-top10">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                    a
-                    galley of type and scrambled it to make a type specimen book. It has survived not only five
-                    centuries,
-                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
-                    in
-                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with
-                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </section>
-            <section id="section-5">
-                <h3>SECTION 5</h3>
+                <br><br><br><br>
+                <h3 id="section_title" style="font-family: bamin;">Profile</h3>
+                <br><br><br><br>
+                <img src="../img/logo.png">
+                <br><br><br>
                 <p class="padding-top10">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     Lorem
                     Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
@@ -110,6 +107,15 @@
     }
 </script>
 <style>
+    @FONT-FACE {
+        font-family: 'bamin';
+        src:url(../assets/BMHANNAPro.ttf);
+    }
+
+    #section_title {
+        font-size: 50px;
+    }
+
     .navbar2 {
         position: fixed;
         z-index: 999;
@@ -217,36 +223,25 @@
 
     #section-1 {
         height: 1078px;
-        background-color: #3db296;
-        color: #fff;
+        color:black;
         padding: 20px;
     }
 
     #section-2 {
         height: 1078px;
-        background-color: #e9852f;
-        color: #fff;
+        color: black;
         padding: 20px;
     }
 
     #section-3 {
         height: 1078px;
-        background-color: #484e7a;
-        color: #fff;
+        color: black;
         padding: 20px;
     }
 
     #section-4 {
         height: 1078px;
-        background-color: #95ca69;
-        color: #fff;
-        padding: 20px;
-    }
-
-    #section-5 {
-        height: 1078px;
-        background-color: #b4457e;
-        color: #fff;
+        color: black;
         padding: 20px;
     }
 </style>

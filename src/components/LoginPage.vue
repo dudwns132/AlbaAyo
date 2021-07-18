@@ -1,5 +1,6 @@
 <template>
-    <div>
+<div class="desktop">
+    <div style="font-family: bamin;">
         <v-alert
             class="mb-3"
             :value="isLoginError"
@@ -15,6 +16,7 @@
         로그인이 완료되었습니다.
         </v-alert>
         <h1 id="signIn_h1">로그인</h1>
+        <br><br>
             <p id="input_id">아이디: </p>   
                 <b-form-input
                     id="signIn_input-3"
@@ -23,6 +25,7 @@
                     required
                 >
                 </b-form-input>
+                <br><br>
             <p id="input_password">비밀번호: </p>
                 <b-form-input
                     id="signIn_input-4"
@@ -51,7 +54,11 @@
             </b-button>
         </div>
     </div>
-   
+   <div style="position: absolute; z-index: -1; inset: 0px; overflow: hidden; baclground-size:cover; background-position: 50% 50%">
+    <span class="main-arrow" style="position: absolute;"></span>
+    <img width="100%" src="https://cdn.wallpaperhub.app/cloudcache/e/1/1/c/c/1/e11cc11bc54695a5605a987ae3868b4467da9029.jpg">
+   </div>
+</div>
 </template>
 
 <script>
@@ -75,18 +82,27 @@ export default {
 </script>
 
 <style>
-    
+    @FONT-FACE {
+        font-family: 'bamin';
+        src:url(../assets/BMHANNAPro.ttf);
+    }
+
     #signIn_singupbtn {
-        margin-right: 335px;
-        margin-top: 20px;
+        margin-right: 357px;
+        margin-top: 75px;
+        color: aliceblue;
+        background-color: black;
     }
     #signIn_submitbtn {
-        margin-top: 20px;
+        margin-top: 75px;
+        color: aliceblue;
+        background-color: black;
     }
     #signIn_h1 {
         text-align: center;
-        margin-right: 380px;
+        
         margin-top: 30px;
+        color: aliceblue;
         /* display: flex; */
         /* margin-left: 700px;
         margin-top: 20px; */
@@ -95,11 +111,13 @@ export default {
         text-align: center;
         margin-right: 445px;
         margin-top: 20px;
+        color: aliceblue;
     }
     #input_password {
         text-align: center;
         margin-right: 430px;
         margin-top: 10px;
+        color: aliceblue;
     }
     #signIn_input-3 {
         margin: 0 auto;
@@ -108,5 +126,6 @@ export default {
     #signIn_input-4 {
         margin: 0 auto;
         width: 500px;
+        color: black;
     }
 </style>
