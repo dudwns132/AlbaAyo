@@ -280,9 +280,9 @@ export default {
 </script>
 <style>
 .elevation-1 {
-    /* margin-top: 50px;
-    margin-left: 400px; */
+    margin-top: 75px;
+    /*margin-left: 400px; */
     width: 1200px;
-    margin: auto;
+    /* margin: auto; */
 }
 </style>

@@ -132,7 +132,7 @@ import { Carousel, Slide } from 'vue-carousel';
     }
     #group_list_h1 {
         text-align: center;
-        margin-top: 20px;
+        margin-top: 60px;
         color: aliceblue;
     }
     #createbtn {

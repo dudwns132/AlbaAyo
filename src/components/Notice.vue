@@ -95,7 +95,7 @@ export default {
 <style>
     #pageName {
         margin-left: 75px;
-        margin-top: 15px;
+        margin-top: 75px;
         font-weight: 700;
     }
 

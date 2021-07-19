@@ -2,7 +2,7 @@
     <div>
         <!-- 페이지 헤더~152 -->
         <div>
-            <b-navbar type="dark" variant="dark">
+            <b-navbar type="dark" variant="dark" class="fixed-top">
                 <b-navbar-nav>
                     <b-nav-item router :to="{ name: 'MainContent'}">Home</b-nav-item>
                     <b-nav-item v-if="isLogin" @click="$store.dispatch('logout')">Logout</b-nav-item>

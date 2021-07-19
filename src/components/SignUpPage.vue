@@ -1,4 +1,5 @@
 <template>
+<div class="desktop" style="font-family: bamin;">
     <div class="SignUpPage">
         <h1 id="signUp_h1">회원가입</h1>
         <p id="signup_input_email">이메일 주소:</p>
@@ -60,9 +61,14 @@
             >
             </b-form-datepicker>
         <div style="text-align: center">
-            <b-button variant="outline-primary" id="signup_backbtn" router :to="{ name: 'LoginPage' }">← 뒤로가기</b-button>
+            <b-button variant="outline-primary" id="signup_backbtn" router :to="{ name: 'LoginPage' }">뒤로가기</b-button>
             <b-button variant="outline-primary" id="signup_submitbtn" v-on:click="signUp" router :to="{ name: 'LoginPage' }">확인</b-button>
         </div>
+    </div>
+    <div style="position: absolute; z-index: -1; inset: 0px; overflow: hidden; baclground-size:cover; background-position: 50% 50%">
+    <span class="main-arrow" style="position: absolute;"></span>
+    <img width="100%" src="https://cdn.wallpaperhub.app/cloudcache/e/1/1/c/c/1/e11cc11bc54695a5605a987ae3868b4467da9029.jpg">
+    </div>
     </div>
 </template>
 
@@ -123,21 +129,27 @@ export default {
 <style>
 
     #signup_backbtn {
-        margin-right: 333px;
+        margin-right: 370px;
         margin-top: 20px;
+        color: aliceblue;
+        background: black;
     }
     #signup_submitbtn {
         /* margin-left: 350px; */
         margin-top: 20px;
+        color: aliceblue;
+        background: black;
     }
     #submitbtn2 {
         margin-left: 605px;
         margin-top: -65px;
+        color: aliceblue;
+        background: black;
     }
     #signUp_h1 {
         text-align: center;
-        margin-right: 350px;
-        margin-top: 30px;
+        margin-top: 75px;
+        color: aliceblue;
         /* margin-left: 700px;
         margin-top: 20px; */
     }
@@ -145,30 +157,36 @@ export default {
         text-align: center;
         margin-right: 415px;
         margin-top: 20px;
+        color: aliceblue;
     }
     #signup_input_name {
         text-align: center;
         margin-right: 465px;
         margin-top: 20px;
+        color: aliceblue;
     }
     #signup_input_id {
         text-align: center;
         margin-right: 445px;
         margin-top: 20px;
+        color: aliceblue;
     }
     #signup_input_password {
         text-align: center;
         margin-right: 434px;
+        color: aliceblue;
     }
     #signup_input_password_check {
         text-align: center;
         margin-right: 395px;
         margin-top: 20px;
+        color: aliceblue;
     }
     #signup_input_birth {
         text-align: center;
         margin-right: 430px;
         margin-top: 20px;
+        color: aliceblue;
     }   
     #signup_input-1 {
         margin: 0 auto;
@@ -183,10 +201,12 @@ export default {
         width: 500px;
     }
     #signup_input-4 {
+        font-family: Arial, Helvetica, sans-serif;
         margin: 0 auto;
         width: 500px;
     }
     #signup_input-5 {
+        font-family: Arial, Helvetica, sans-serif;
         margin: 0 auto;
         width: 500px;
     }

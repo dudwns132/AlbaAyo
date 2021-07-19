@@ -140,6 +140,7 @@ b { /* used for event dates/times */
   min-height: 100%;
   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
   font-size: 14px;
+  margin-top: 40px;
 }
 .demo-app-sidebar {
   width: 300px;

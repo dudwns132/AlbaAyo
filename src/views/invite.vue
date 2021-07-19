@@ -1,11 +1,14 @@
 <template>
-    <div class="invite">
+<div class="desktop" >
+    <div class="invite" style="font-family: bamin;">
         <h1 id="groupInvite">그룹초대</h1>
         <h3 id="text_messeage1">초대 할 계정의 이메일 정보를 입력해주세요.</h3>
-        <b-input-group prepend="E-mail" id="text-area">
-            <b-form-input ></b-form-input>
-            <b-input-group-append>
-                <b-button v-b-toggle.collapse-3 class="m-1" variant="outline-success">조회</b-button>
+            <div class="input-group" >
+                <input type="text" id="inputEmail" placeholder="Email">
+                <div class="input-group-dropdown-menu">
+                    <span class="input-group-text">@example.com</span>
+                </div>
+            </div>
                 <!-- <b-collapse visible id="collapse-3">
                     <b-card>
                         <p>이름 : 박영준</p>
@@ -13,8 +16,11 @@
                         <p>아이디: qkrdudwns132</p>
                     </b-card>
                 </b-collapse> -->
-            </b-input-group-append>
-        </b-input-group>
+    </div>
+    <div style="position: absolute; z-index: -1; inset: 0px; overflow: hidden; baclground-size:cover; background-position: 50% 50%">
+    <span class="main-arrow" style="position: absolute;"></span>
+    <img width="100%" src="https://cdn.wallpaperhub.app/cloudcache/e/1/1/c/c/1/e11cc11bc54695a5605a987ae3868b4467da9029.jpg">
+    </div>
     </div>
 </template>
 
@@ -25,19 +31,33 @@ export default {
 </script>
 
 <style>
+    @FONT-FACE {
+        font-family: 'bamin';
+        src:url(../assets/BMHANNAPro.ttf);
+    }
+
+    #inputEmail {
+        background: white;
+        width: 500px;
+        margin-left: 560px;
+        margin-top: 75px;
+    }
+
+    .input-group-text {
+        margin-top: 75px;
+    }
+
     #groupInvite {
-        font-family: Arial, Helvetica, sans-serif;
         text-align: center;
-        margin-top: 50px;
-        margin-right: 700px;
+        margin-top: 80px;
+        color: aliceblue;
         /* margin-top: 75px;
         margin-left: 525px; */
     }
     #text_messeage1 {
-        font-family: Arial, Helvetica, sans-serif;
         text-align: center;
-        margin-top: 40px;
-        margin-right: 310px;
+        margin-top: 75px;
+        color: aliceblue;
     }
     #text-area {
         text-align: center;

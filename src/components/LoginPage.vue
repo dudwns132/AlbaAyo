@@ -100,8 +100,7 @@ export default {
     }
     #signIn_h1 {
         text-align: center;
-        
-        margin-top: 30px;
+        margin-top: 75px;
         color: aliceblue;
         /* display: flex; */
         /* margin-left: 700px;
@@ -124,8 +123,8 @@ export default {
         width: 500px;
     }
     #signIn_input-4 {
+        font-family: Arial, Helvetica, sans-serif;
         margin: 0 auto;
         width: 500px;
-        color: black;
     }
 </style>

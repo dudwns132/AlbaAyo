@@ -1,4 +1,5 @@
 <template>
+<div class="desktop" style="font-family: bamin;">
     <div>
         <h1 id="GroupCreate_h1">그룹 생성</h1>
             <p id="input_number">사업자 등록 번호:</p>
@@ -31,6 +32,13 @@
                 <b-button variant="outline-primary" id="cancelbtn" href="/GroupList">취소</b-button>
                 <b-button variant="outline-primary" id="submitbtn" onClick="create" href="/GroupCreate">확인</b-button>
             </div>    
+    </div>
+    <div class="contents">
+  <div style="position: absolute; z-index: -1; inset: 0px; overflow: hidden; baclground-size:cover; background-position: 50% 50%">
+    <span class="main-arrow" style="position: absolute;"></span>
+    <img width="100%" src="https://cdn.wallpaperhub.app/cloudcache/e/1/1/c/c/1/e11cc11bc54695a5605a987ae3868b4467da9029.jpg">
+    </div>
+    </div>
     </div>
 </template>
 
@@ -82,35 +90,45 @@ export default {
 </script>
 
 <style>
-
+    @FONT-FACE {
+        font-family: 'bamin';
+        src:url(../assets/BMHANNAPro.ttf);
+    }
     #cancelbtn {
-        margin-right: 350px;
-        margin-top: 20px;
+        margin-right: 360px;
+        margin-top: 40px;
+        background-color: black;
+        color: aliceblue;
     }
     #submitbtn {
-        margin-top: 20px;
+        margin-top: 40px;
+        background-color: black;
+        color: aliceblue;
     }
     #GroupCreate_h1 {
         text-align: center;
-        margin-right: 300px;
-        margin-top: 30px;
+        margin-top: 75px;
         /* margin-left: 700px;
         margin-top: 20px; */
+        color: aliceblue;
     }
     #input_number {
         text-align: center;
         margin-right: 345px;
-        margin-top: 20px;
+        margin-top: 30px;
+        color: aliceblue;
     }
     #input_gname {
         text-align: center;
         margin-right: 415px;
-        margin-top: 20px;
+        margin-top: 30px;
+        color: aliceblue;
     }
     #input_address {
         text-align: center;
         margin-right: 430px;
-        margin-top: 20px;
+        margin-top: 30px;
+        color: aliceblue;
     }
     /* #input-group-3 {
         margin-left: 700px;
