@@ -3,12 +3,18 @@
     <div class="invite" style="font-family: bamin;">
         <h1 id="groupInvite">그룹초대</h1>
         <h3 id="text_messeage1">초대 할 계정의 이메일 정보를 입력해주세요.</h3>
-            <div class="input-group" >
+            <!-- <div class="input-group" >
                 <input type="text" id="inputEmail" placeholder="Email">
                 <div class="input-group-dropdown-menu">
                     <span class="input-group-text">@example.com</span>
                 </div>
-            </div>
+            </div> -->
+            <b-input-group align-center prepend="Email" class="mt-5" id="inputEmail">
+                <b-form-input id="inputEmailText" placeholder="Example@gmail.com"></b-form-input>
+                <b-input-group-append>
+                    <b-button id="SearchButton" variant="outline-success">Search</b-button>
+                </b-input-group-append>
+            </b-input-group>
                 <!-- <b-collapse visible id="collapse-3">
                     <b-card>
                         <p>이름 : 박영준</p>
@@ -37,14 +43,17 @@ export default {
     }
 
     #inputEmail {
-        background: white;
         width: 500px;
-        margin-left: 560px;
-        margin-top: 75px;
+        margin: auto;
     }
 
-    .input-group-text {
-        margin-top: 75px;
+    #inputEmailText {
+        width: 100px;
+    }
+
+    #SearchButton {
+        background: gainsboro;
+        color: black;
     }
 
     #groupInvite {
