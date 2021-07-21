@@ -2,11 +2,9 @@
 <div class="desktop">
   <div id="app" class="GroupList">
     <h1 id="group_list_h1" style="font-family: bamin;">그룹이 없으신가요? 또는 그룹을 생성하시겠습니까?</h1>
-    <!-- <h1>Don't you have any Group? or create new Group?</h1> -->
     <div style="text-align: center">
       <b-button variant="outline-primary" id="createbtn" router :to="{ name: 'GroupCreate' }">그룹생성</b-button>
     </div>
-    <p></p>
     <div style="text-algin: center">
      <b-container id="cont">
     <b-row>
@@ -87,7 +85,7 @@ Quality(품질), Cleanness(청결도), Service(서비스)를 유지하며 고객
   <div class="contents">
   <div style="position: absolute; z-index: -1; inset: 0px; overflow: hidden; baclground-size:cover; background-position: 50% 50%">
     <span class="main-arrow" style="position: absolute;"></span>
-    <img width="100%" src="https://cdn.wallpaperhub.app/cloudcache/e/1/1/c/c/1/e11cc11bc54695a5605a987ae3868b4467da9029.jpg">
+    <img width="100%" src="../img/IMG_Background.png">
     </div>
     </div>
     </div>
@@ -126,13 +124,14 @@ import { Carousel, Slide } from 'vue-carousel';
     }
     #cont {
       margin: 0 auto;
+      margin-top: -50px;
     }
     .row{
     margin-top:100px;
     }
     #group_list_h1 {
         text-align: center;
-        margin-top: 60px;
+        margin-top: 75px;
         color: aliceblue;
     }
     #createbtn {

@@ -7,7 +7,7 @@
   <div class="contents">
   <div style="position: absolute; z-index: -1; inset: 0px; overflow: hidden; baclground-size:cover; background-position: 50% 50%">
     <span class="main-arrow" style="position: absolute;"></span>
-    <img width="100%" src="https://cdn.wallpaperhub.app/cloudcache/e/1/1/c/c/1/e11cc11bc54695a5605a987ae3868b4467da9029.jpg">
+    <img width="100%" src="../img/IMG_Background.png">
      <!-- <b-carousel
       id="carousel-1"
       v-model="slide"
@@ -118,13 +118,12 @@ import { mapState } from "vuex";
     src:url(../assets/BMHANNAPro.ttf);
   }
   #maintext1 {
-    margin-top: 175px;
-    font-size: 170px;
+    margin-top: 250px;
+    font-size: 72px;
     color: aliceblue;
   }
   #maintext2 {
-    margin-left: 800px;
-    font-size: 135px;
+    font-size: 56px;
     color: aliceblue;
   }
 </style>

@@ -1,23 +1,17 @@
 <template>
 <div class="desktop">
     <div style="font-family: bamin;">
+        <h1 id="signIn_h1">로그인</h1>
+        <br><br>
         <v-alert
             class="mb-3"
+            id="alertBar"
             :value="isLoginError"
             type="error"
         >
         가입하지 않은 아이디이거나 잘못된 비밀번호입니다.
         </v-alert>
-        <v-alert
-            class="mb-3"
-            :value="isLogin"
-            type="success"
-        >
-        로그인이 완료되었습니다.
-        </v-alert>
-        <h1 id="signIn_h1">로그인</h1>
-        <br><br>
-            <p id="input_id">아이디: </p>   
+            <p id="login_input_id">아이디: </p>   
                 <b-form-input
                     id="signIn_input-3"
                     v-model="email"
@@ -52,11 +46,32 @@
             >
                 로그인
             </b-button>
+
+            <br><br><br>
+            <div class="findIDPW">
+                <b-button
+                    variant="outline-none"
+                    id="findIdbtn"
+                    router
+                    :to="{ name: 'FindID' }"
+                >
+                    아이디찾기
+                </b-button>
+
+                <b-button
+                    variant="outline-none"
+                    id="findPwbtn"
+                    router
+                    :to="{ name: 'FindPW' }"
+                >
+                    비밀번호찾기
+                </b-button>
+            </div>
         </div>
     </div>
    <div style="position: absolute; z-index: -1; inset: 0px; overflow: hidden; baclground-size:cover; background-position: 50% 50%">
     <span class="main-arrow" style="position: absolute;"></span>
-    <img width="100%" src="https://cdn.wallpaperhub.app/cloudcache/e/1/1/c/c/1/e11cc11bc54695a5605a987ae3868b4467da9029.jpg">
+    <img width="100%" src="../img/IMG_Background.png">
    </div>
 </div>
 </template>
@@ -106,7 +121,7 @@ export default {
         /* margin-left: 700px;
         margin-top: 20px; */
     }
-    #input_id {
+    #login_input_id {
         text-align: center;
         margin-right: 445px;
         margin-top: 20px;
@@ -126,5 +141,29 @@ export default {
         font-family: Arial, Helvetica, sans-serif;
         margin: 0 auto;
         width: 500px;
+    }
+
+    .mb-3 {
+        width: 500px;
+        margin: auto;
+        /* font-family: Arial, Helvetica, sans-serif; */
+    }
+
+    #alertBar {
+        background: red;
+        
+        color: aliceblue;
+    }
+
+    .findIDPW {
+        margin-top: -85px;
+    }
+
+    #findIdbtn {
+        color: aliceblue;
+    }
+
+    #findPwbtn {
+        color: aliceblue;
     }
 </style>

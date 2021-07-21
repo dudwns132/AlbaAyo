@@ -55,6 +55,20 @@ const routes = [
             import(/* webpackChunkName: "LoginPage*/ "../components/LoginPage.vue"),
     },
     {
+        path: '/FindID',
+        name: 'FindID',
+        beforeEnter: rejectAuthUser,
+        component: () =>
+            import(/* webpackChunkName: "FindID*/ "../components/FindID.vue"),
+    },
+    {
+        path: '/FindPW',
+        name: 'FindPW',
+        beforeEnter: rejectAuthUser,
+        component: () =>
+            import(/* webpackChunkName: "FindPW*/ "../components/FindPW.vue"),
+    },
+    {
         path: '/SignUpPage',
         name: 'SignUpPage',
         component: () =>
@@ -104,17 +118,10 @@ const routes = [
             import(/* webpackChunkName: "StaffList*/ "../components/StaffList.vue"),
     },
     {
-        path: "/mypage",
-        name: "mypage",
-        beforeEnter: onlyAuthUser,
-        component: () =>
-            import(/* webpackChunkName: "mypage*/ "../views/Mypage.vue"),
-    },
-    {
         path: "/Intro",
         name: "Intro",
         component: () =>
-            import(/* webpackChunkName: "mypage*/ "../components/Intro.vue"),
+            import(/* webpackChunkName: "Intro*/ "../components/Intro.vue"),
     },
 ]
 

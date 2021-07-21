@@ -56,7 +56,7 @@
         <p id="signup_input_birth">생년월일:</p>
             <b-form-datepicker 
                 id="signup_input-6" 
-                v-model="value" 
+                v-model="form.birth" 
                 size="200px"
             >
             </b-form-datepicker>
@@ -67,7 +67,7 @@
     </div>
     <div style="position: absolute; z-index: -1; inset: 0px; overflow: hidden; baclground-size:cover; background-position: 50% 50%">
     <span class="main-arrow" style="position: absolute;"></span>
-    <img width="100%" src="https://cdn.wallpaperhub.app/cloudcache/e/1/1/c/c/1/e11cc11bc54695a5605a987ae3868b4467da9029.jpg">
+    <img width="100%" src="../img/IMG_Background.png">
     </div>
     </div>
 </template>
