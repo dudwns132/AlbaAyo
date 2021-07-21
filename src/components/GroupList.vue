@@ -5,6 +5,7 @@
     <div style="text-align: center">
       <b-button variant="outline-primary" id="createbtn" router :to="{ name: 'GroupCreate' }">그룹생성</b-button>
     </div>
+    <br><br>
     <div style="text-algin: center">
      <b-container id="cont">
     <b-row>
@@ -124,10 +125,6 @@ import { Carousel, Slide } from 'vue-carousel';
     }
     #cont {
       margin: 0 auto;
-      margin-top: -50px;
-    }
-    .row{
-    margin-top:100px;
     }
     #group_list_h1 {
         text-align: center;
