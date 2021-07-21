@@ -13,7 +13,7 @@
         </v-alert>
             <p id="login_input_id">아이디: </p>   
                 <b-form-input
-                    id="signIn_input-3"
+                    id="login_signIn_input-3"
                     v-model="email"
                     placeholder="Enter ID"
                     required
@@ -133,7 +133,7 @@ export default {
         margin-top: 10px;
         color: aliceblue;
     }
-    #signIn_input-3 {
+    #login_signIn_input-3 {
         margin: 0 auto;
         width: 500px;
     }
