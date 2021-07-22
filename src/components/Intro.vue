@@ -26,7 +26,7 @@
         </nav>
         <div class="section">
             <section id="section-1">
-                <br><hr><br>
+                <br><hr style="border: solid 3px black;"><br>
                 <h3 id="section_title" style="font-family: bamin;" >블록체인 시스템 도입</h3>
                 <br><br><br>
                 <img src="../img/blockchain.png">
@@ -45,7 +45,7 @@
                 </p>
             </section>
             <section id="section-2">
-                <br><br><br><hr><br><br><br>
+                <br><br><br><hr style="border: solid 3px black;"><br><br><br>
                 <h3 id="section_title" style="font-family: bamin;">그룹화</h3>
                 <br><br><br>
                 <img src="../img/Grouping.png">
@@ -63,7 +63,7 @@
                     desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </section>
             <section id="section-3">
-                <br><br><hr><br><br>
+                <br><br><hr style="border: solid 3px black;"><br><br>
                 <h3 id="section_title" style="font-family: bamin;">위치기반 서비스를 이용한 실시간 모니터링 WITH Mobile</h3>
                 <br><br><br>
                 <img src="../img/LocationCheck.png">
@@ -81,7 +81,7 @@
                     desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </section>
             <section id="section-4">
-                <br><br><hr><br><br>
+                <br><br><hr style="border: solid 3px black;"><br><br>
                 <h3 id="section_title" style="font-family: bamin;">Profile</h3>
                 <br><br><br><br>
                 <img src="../img/logo.png">
@@ -243,5 +243,9 @@
         height: 1078px;
         color: black;
         padding: 20px;
+    }
+
+    .hr {
+        height: 5px;
     }
 </style>

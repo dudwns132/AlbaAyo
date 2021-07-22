@@ -12,7 +12,7 @@
       <b-col cols="12">
         <carousel :perPage="3">
           <slide class="p-2">
-            <b-card style="font-family: bamin;" title="GS25 영진전문대점" img-src="https://mblogthumb-phinf.pstatic.net/20161018_4/1606006_1476802452458AuWnG_JPEG/20161018_163800.jpg?type=w800" img-alt="Image" img-top tag="article">
+            <b-card style="font-family: bamin;" img-alt="Image" img-top tag="article">
               <b-card-text>
                 고객이 신뢰하고 믿을 수 있는 대표 편의점 GS25. 대구광역시 북구 복현동 위치, 편의점.
               </b-card-text>

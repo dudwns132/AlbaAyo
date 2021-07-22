@@ -1,4 +1,5 @@
 <template>
+<div class="desktop" style="font-family: bamin;">
     <v-data-table
       :headers="headers"
       :items="staff"
@@ -6,9 +7,10 @@
       class="elevation-1"
     >
       <template v-slot:top>
-          <v-toolbar flat>
+          <v-toolbar id="staffListHeader" flat>
               <v-toolbar-title>직원목록</v-toolbar-title>
               <v-divider
+                
                 class="mx-4"
                 inset
                 vertical
@@ -25,6 +27,13 @@
             </v-btn>
       </template>
     </v-data-table>
+    <div class="contents">
+  <div style="position: absolute; z-index: -1; inset: 0px; overflow: hidden; baclground-size:cover; background-position: 50% 50%">
+    <span class="main-arrow" style="position: absolute;"></span>
+    <img width="100%" src="../img/IMG_Background.png">
+    </div>
+    </div>
+    </div>
 </template>
     
 <script>
@@ -168,9 +177,15 @@ export default {
 </script>
 <style>
 .elevation-1 {
-    margin-top: 75px;
+    margin-top: 175px;
     /*margin-left: 400px; */
     width: 1200px;
-    /* margin: auto; */
+    margin: 0 auto;
+    background-color:rgba(0, 0, 0, 0) !important;
+
+}
+#staffListHeader {
+    margin: 0 auto;
+    background-color:rgba(0, 0, 0, 0) !important;
 }
 </style>
