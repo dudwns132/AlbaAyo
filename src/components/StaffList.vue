@@ -185,7 +185,8 @@ export default {
 
 }
 #staffListHeader {
-    margin: 0 auto;
+    margin-top: 50px;
+    /* margin: 0 auto; */
     background-color:rgba(0, 0, 0, 0) !important;
 }
 </style>

@@ -42,16 +42,19 @@
                 type="password"
             >
             </b-form-input>
-
         <p id="signup_input_password_check">패스워드 확인:</p>
             <b-form-input
                 id="signup_input-5"
-                v-model="form.passwordcheck"
+                v-model="passwordcheck"
                 placeholder="Enter Password again"
                 required
                 type="password"
+                @blur="passwordCheckValid"
             >
             </b-form-input>
+            <div v-if="passwordCheckFlag === false" class="passwordCheck">
+                비밀번호가 동일하지 않습니다.
+            </div>
 
         <p id="signup_input_birth">생년월일:</p>
             <b-form-datepicker 
@@ -82,11 +85,12 @@ export default {
           email: '',
           name: '',
           userId: '',
-          password: '',
-          passwordcheck: '',
+          password: null,
           birth: ''
         },
-        show: true
+        show: true,
+        passwordcheck: '',
+        passwordCheckFlag: true
       }
     },
     methods: {
@@ -105,7 +109,14 @@ export default {
               .then(function(response) {
                   console.log(response.data);
               });
-          },
+      },
+      passwordCheckValid () {
+          if(this.form.password === this.passwordcheck) {
+              this.passwordCheckFlag = true
+          } else {
+              this.passwordCheckFlag = false
+          }
+      },
       onReset(event) {
         event.preventDefault()
         // Reset our form values
@@ -213,5 +224,10 @@ export default {
     #signup_input-6__outer_ {
         margin: 0 auto;
         width: 500px;
+    }
+    .passwordCheck {
+        margin-top: 20px;
+        text-align: center;
+        color: aliceblue;
     }
 </style>
