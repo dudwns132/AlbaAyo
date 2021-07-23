@@ -2,17 +2,19 @@
     <div>
         <!-- 페이지 헤더~152 -->
         <div>
-            <b-navbar type="dark" variant="dark" class="fixed-top" >
+            <b-navbar id="headnavbar" type="dark" variant="dark" class="fixed-top;" >
                 <b-navbar-nav>
-                    <b-nav-item router :to="{ name: 'MainContent'}">Home</b-nav-item>
-                    <b-nav-item v-if="isLogin" @click="$store.dispatch('logout')">Logout</b-nav-item>
-                    <b-nav-item v-if="isLogin" router :to="{ name: 'GroupList'}">GroupList</b-nav-item>
-                    <b-nav-item v-if="isLogin" router :to="{ name: 'invite'}">Invite</b-nav-item>
-                    <b-nav-item v-if="isLogin" router :to="{ name: 'StaffList'}">StaffList</b-nav-item>
-                    <b-nav-item v-if="isLogin" router :to="{ name: 'Schedule'}">Schedule</b-nav-item>
-                    <b-nav-item v-if="isLogin" router :to="{ name: 'Notice'}">Notice</b-nav-item>
-                    <b-nav-item v-else router :to="{ name: 'LoginPage'}">Login</b-nav-item>
-                    <b-nav-item router :to="{ name: 'Intro'}">Intro</b-nav-item>
+                    <b-nav-item class="ml-5"></b-nav-item>
+                    <b-nav-item class="ml-5"></b-nav-item>
+                    <b-nav-item id="homeItem" class="ml-5" router :to="{ name: 'MainContent'}">Home</b-nav-item>
+                    <b-nav-item class="ml-5" v-if="isLogin" @click="$store.dispatch('logout')">Logout</b-nav-item>
+                    <b-nav-item class="ml-5" v-if="isLogin" router :to="{ name: 'GroupList'}">GroupList</b-nav-item>
+                    <b-nav-item class="ml-5" v-if="isLogin" router :to="{ name: 'invite'}">Invite</b-nav-item>
+                    <b-nav-item class="ml-5" v-if="isLogin" router :to="{ name: 'StaffList'}">StaffList</b-nav-item>
+                    <b-nav-item class="ml-5" v-if="isLogin" router :to="{ name: 'Schedule'}">Schedule</b-nav-item>
+                    <b-nav-item class="ml-5" v-if="isLogin" router :to="{ name: 'Notice'}">Notice</b-nav-item>
+                    <b-nav-item class="ml-5" v-else router :to="{ name: 'LoginPage'}">Login</b-nav-item>
+                    <b-nav-item class="ml-5" router :to="{ name: 'Intro'}">Intro</b-nav-item>
                     
                 </b-navbar-nav>
             </b-navbar>
@@ -262,5 +264,13 @@
         margin-right: 40px;
         background-color: #8dc1e9;
         border-color: #8dc1e9;
+    }
+
+    #headnavbar {
+        height: 50px;
+    }
+
+    #homeItem {
+        /* margin-left: 20px; */
     }
 </style>

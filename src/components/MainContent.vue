@@ -119,11 +119,13 @@ import { mapState } from "vuex";
   }
   #maintext1 {
     margin-top: 250px;
+    margin-left: 120px;
     font-size: 72px;
     color: aliceblue;
   }
   #maintext2 {
     font-size: 56px;
+    margin-left: 120px;
     color: aliceblue;
   }
 </style>
