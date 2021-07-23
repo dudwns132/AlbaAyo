@@ -97,7 +97,6 @@ Quality(품질), Cleanness(청결도), Service(서비스)를 유지하며 고객
 import { Carousel, Slide } from 'vue-carousel';
 
   export default {
-    el: "#app",
     components: {
         Carousel,
         Slide

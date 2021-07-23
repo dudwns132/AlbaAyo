@@ -12,7 +12,7 @@
                 required
             >
             </b-form-input>
-
+            <div class="error_next_box" v-if="checkFlag && !form.email"></div>
         <p id="signup_input_name">이름:</p>
             <b-form-input
                 id="signup_input-2"
@@ -26,10 +26,15 @@
             <b-form-input
                 id="signup_input_3"
                 v-model="form.userId"
-                placeholder="Enter ID"
+                placeholder="영어대소문자 + 숫자(6~20)"
                 required
+                minlength="8"
+                maxlength="20"
             >
             </b-form-input>
+            <div v-if="!idValid" class="idCheck">
+                유효하지 않는 아이디입니다.
+            </div>
             <b-button variant="outline-primary" id="submitbtn2">중복확인</b-button>
         </div>
 
@@ -53,7 +58,7 @@
             >
             </b-form-input>
             <div v-if="passwordCheckFlag === false" class="passwordCheck">
-                비밀번호가 동일하지 않습니다.
+                비밀번호가 일치하지 않습니다.
             </div>
 
         <p id="signup_input_birth">생년월일:</p>
@@ -65,7 +70,7 @@
             </b-form-datepicker>
         <div style="text-align: center">
             <b-button variant="outline-primary" id="signup_backbtn" router :to="{ name: 'LoginPage' }">뒤로가기</b-button>
-            <b-button variant="outline-primary" id="signup_submitbtn" v-on:click="signUp" router :to="{ name: 'LoginPage' }">확인</b-button>
+            <b-button variant="outline-primary" id="signup_submitbtn" v-on:click="signUp" @click="goNextPage" router :to="{ name: 'LoginPage' }">확인</b-button>
         </div>
     </div>
     <div style="position: absolute; z-index: -1; inset: 0px; overflow: hidden; baclground-size:cover; background-position: 50% 50%">
@@ -84,7 +89,7 @@ export default {
         form: {
           email: '',
           name: '',
-          userId: '',
+          userId: null,
           password: null,
           birth: ''
         },
@@ -92,6 +97,11 @@ export default {
         passwordcheck: '',
         passwordCheckFlag: true
       }
+    },
+    computed: {
+        idValid() {
+            return /^[A-Za-z0-9]+$/.test(this.form.userId)
+        }
     },
     methods: {
       onSubmit(event) {
@@ -131,7 +141,22 @@ export default {
         this.$nextTick(() => {
           this.show = true
         })
-      }
+      },
+      isEmpty(data) {
+          if(data === "" || data === null || data === undefined) {
+              return true;
+          } else {
+              return false;
+          }
+      },
+      goNextPage() {
+          this.checkFlag = true; 
+          if(
+              !this.isEmpty(this.form.email)
+          ) {
+              this.$router.push({ name: "loginPage", params: { form: this.form}})
+          }
+      } 
     }
   }
 
@@ -226,6 +251,11 @@ export default {
         width: 500px;
     }
     .passwordCheck {
+        margin-top: 20px;
+        text-align: center;
+        color: aliceblue;
+    }
+    .idCheck {
         margin-top: 20px;
         text-align: center;
         color: aliceblue;
