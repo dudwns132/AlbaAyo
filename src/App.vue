@@ -6,15 +6,16 @@
                 <b-navbar-nav>
                     <b-nav-item class="ml-5"></b-nav-item>
                     <b-nav-item class="ml-5"></b-nav-item>
-                    <b-nav-item id="homeItem" class="ml-5" router :to="{ name: 'MainContent'}">Home</b-nav-item>
-                    <b-nav-item class="ml-5" v-if="isLogin" @click="$store.dispatch('logout')">Logout</b-nav-item>
-                    <b-nav-item class="ml-5" v-if="isLogin" router :to="{ name: 'GroupList'}">GroupList</b-nav-item>
-                    <b-nav-item class="ml-5" v-if="isLogin" router :to="{ name: 'invite'}">Invite</b-nav-item>
-                    <b-nav-item class="ml-5" v-if="isLogin" router :to="{ name: 'StaffList'}">StaffList</b-nav-item>
-                    <b-nav-item class="ml-5" v-if="isLogin" router :to="{ name: 'Schedule'}">Schedule</b-nav-item>
-                    <b-nav-item class="ml-5" v-if="isLogin" router :to="{ name: 'Notice'}">Notice</b-nav-item>
-                    <b-nav-item class="ml-5" v-else router :to="{ name: 'LoginPage'}">Login</b-nav-item>
-                    <b-nav-item class="ml-5" router :to="{ name: 'Intro'}">Intro</b-nav-item>
+                    <b-nav-item id="homeItem" class="ml-5" router :to="{ name: 'MainContent'}">홈</b-nav-item>
+                    <b-nav-item class="ml-5" v-if="isLogin" @click="$store.dispatch('logout')">로그아웃</b-nav-item>
+                    <b-nav-item class="ml-5" v-if="isLogin" router :to="{ name: 'GroupList'}">그룹목록</b-nav-item>
+                    <b-nav-item class="ml-5" v-if="isLogin" router :to="{ name: 'invite'}">그룹초대</b-nav-item>
+                    <b-nav-item class="ml-5" v-if="isLogin" router :to="{ name: 'StaffList'}">직원목록</b-nav-item>
+                    <b-nav-item class="ml-5" v-if="isLogin" router :to="{ name: 'Salary'}">월급조회</b-nav-item>
+                    <b-nav-item class="ml-5" v-if="isLogin" router :to="{ name: 'Schedule'}">일정</b-nav-item>
+                    <b-nav-item class="ml-5" v-if="isLogin" router :to="{ name: 'Notice'}">공지사항</b-nav-item>
+                    <b-nav-item class="ml-5" v-else router :to="{ name: 'LoginPage'}">로그인</b-nav-item>
+                    <b-nav-item class="ml-5" router :to="{ name: 'Intro'}">더보기</b-nav-item>
                     
                 </b-navbar-nav>
             </b-navbar>

@@ -123,6 +123,13 @@ const routes = [
         component: () =>
             import(/* webpackChunkName: "Intro*/ "../components/Intro.vue"),
     },
+    {
+        path: '/Salary',
+        name: 'Salary',
+        beforeEnter: onlyAuthUser,
+        component: () =>
+            import(/* webpackChunkName: "Salary*/ "../components/Salary.vue"),
+    },
 ]
 
   
