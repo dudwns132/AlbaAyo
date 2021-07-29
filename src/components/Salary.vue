@@ -54,7 +54,7 @@ export default {
     data() {
       return {
         items: [
-          { age: 25, name: '박영준', salary: '150만원'},
+          { age: 25, name: '박영준', salary: '150만원 '},
           { age: 24, name: '조승완', salary: '120만원'},
         ],
         fields: [
