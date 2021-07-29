@@ -2,7 +2,7 @@
     <div>
         <!-- 페이지 헤더~152 -->
         <div>
-            <b-navbar id="headnavbar" type="dark" variant="dark" class="fixed-top;" >
+            <b-navbar id="headnavbar" type="dark" variant="dark" class="fixed-top" >
                 <b-navbar-nav>
                     <b-nav-item class="ml-5"></b-nav-item>
                     <b-nav-item class="ml-5"></b-nav-item>
